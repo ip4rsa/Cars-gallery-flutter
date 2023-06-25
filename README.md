@@ -1,6 +1,8 @@
-# merscedes_car
+# merscedes cars
 
-A new Flutter project.
+- Mercedes-Benz cars gallery application <br>
+  using Dart and Flutter <br>
+  being completed...
 
 ## Getting Started
 

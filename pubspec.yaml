@@ -62,8 +62,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/img/AMG-SL/
     - assets/img/
+    - assets/img/AMG-SL/
+    - assets/img/AMG-GT/
+    - assets/img/CLS/
+    - assets/img/G-class/
+    - assets/img/maybach/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

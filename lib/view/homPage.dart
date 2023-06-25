@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
+import 'package:merscedes_car/model/carsData.dart';
+import 'package:merscedes_car/model/dataModel.dart';
 
 class homePage extends StatefulWidget {
   @override
@@ -81,7 +83,7 @@ class _homePageState extends State<homePage> {
                   height: 255,
                   child: ListView.builder(
                     physics: BouncingScrollPhysics(),
-                    itemCount: 6,
+                    itemCount: carsList.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return Padding(
@@ -105,14 +107,14 @@ class _homePageState extends State<homePage> {
                             width: 200,
                             child: Column(
                               children: [
-                                const Padding(
+                                Padding(
                                   padding: EdgeInsets.fromLTRB(15, 13, 15, 0),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        "AMG-SL",
+                                        carsList[index].nameCarEN,
                                         style: TextStyle(
                                             fontFamily: 'yekanMedum',
                                             color:
@@ -120,7 +122,7 @@ class _homePageState extends State<homePage> {
                                             fontSize: 17),
                                       ),
                                       Text(
-                                        "مرسدس بنز",
+                                        carsList[index].nameCarFA,
                                         style: TextStyle(
                                             fontFamily: 'yekanMedum',
                                             color: Colors.white,
@@ -129,34 +131,36 @@ class _homePageState extends State<homePage> {
                                     ],
                                   ),
                                 ),
-                                Image.asset(
-                                  "assets/img/AMG-SL/silver.png",
-                                  scale: 10,
-                                  fit: BoxFit.none,
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 20),
+                                  child: Image.asset(
+                                    carsList[index].imgCar,
+                                    scale: 3.9,
+                                    fit: BoxFit.none,
+                                  ),
                                 ),
                                 Padding(
                                   padding:
-                                      const EdgeInsets.fromLTRB(10, 35, 10, 0),
+                                      const EdgeInsets.fromLTRB(10, 37, 10, 0),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Text("کوپه"),
+                                      Text(carsList[index].classCar),
                                       ElevatedButton(
                                           style: ElevatedButton.styleFrom(
-                                              backgroundColor:
-                                                  const Color.fromARGB(
-                                                      255, 38, 38, 38),
-                                              shape:
-                                                  const RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.all(
-                                                              Radius.circular(
-                                                                  10)))),
+                                            backgroundColor:
+                                                const Color.fromARGB(
+                                                    255, 38, 38, 38),
+                                            shape: const RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(10)),
+                                            ),
+                                          ),
                                           onPressed: () {},
                                           child: const Padding(
-                                            padding: EdgeInsets.fromLTRB(
-                                                10, 0, 10, 0),
+                                            padding:
+                                                EdgeInsets.fromLTRB(5, 0, 5, 0),
                                             child: Row(
                                               children: [
                                                 Text(

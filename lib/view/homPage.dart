@@ -12,6 +12,9 @@ class homePage extends StatefulWidget {
 class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    double bodyMarginScreen = size.width / 17;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       supportedLocales: const [
@@ -76,18 +79,20 @@ class _homePageState extends State<homePage> {
                 ],
               ),
             ),
+
             //-----> Cars List
             Stack(
               children: [
                 SizedBox(
-                  height: 255,
+                  height: 265,
                   child: ListView.builder(
                     physics: BouncingScrollPhysics(),
                     itemCount: carsList.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.fromLTRB(
+                            index == 0 ? bodyMarginScreen : 8, 8, 7, 8),
                         child: InkWell(
                           onTap: () {},
                           child: Container(
@@ -98,50 +103,54 @@ class _homePageState extends State<homePage> {
                                 color: Color.fromARGB(255, 61, 120, 224),
                                 boxShadow: [
                                   BoxShadow(
-                                      color: Color.fromARGB(140, 12, 101, 161),
-                                      spreadRadius: .5,
-                                      blurRadius: 4,
-                                      offset: Offset(.4, 2.5)),
+                                    color: Color.fromARGB(140, 12, 101, 161),
+                                    spreadRadius: .5,
+                                    blurRadius: 4,
+                                    offset: Offset(.4, 2.5),
+                                  ),
                                 ]),
                             height: 100,
-                            width: 200,
+                            width: 210,
                             child: Column(
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(15, 13, 15, 0),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        carsList[index].nameCarEN,
-                                        style: TextStyle(
-                                            fontFamily: 'yekanMedum',
-                                            color:
-                                                Color.fromARGB(255, 49, 49, 49),
-                                            fontSize: 17),
-                                      ),
-                                      Text(
-                                        carsList[index].nameCarFA,
-                                        style: TextStyle(
-                                            fontFamily: 'yekanMedum',
-                                            color: Colors.white,
-                                            fontSize: 18),
-                                      ),
-                                    ],
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(top: 2),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          carsList[index].nameCarEN,
+                                          style: TextStyle(
+                                              fontFamily: 'yekanMedum',
+                                              color: Color.fromARGB(
+                                                  255, 49, 49, 49),
+                                              fontSize: 17),
+                                        ),
+                                        Text(
+                                          carsList[index].nameCarFA,
+                                          style: TextStyle(
+                                              fontFamily: 'yekanMedum',
+                                              color: Colors.white,
+                                              fontSize: 18),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 20),
+                                  padding: const EdgeInsets.only(top: 30),
                                   child: Image.asset(
                                     carsList[index].imgCar,
-                                    scale: 3.9,
+                                    scale: 3.6,
                                     fit: BoxFit.none,
                                   ),
                                 ),
                                 Padding(
                                   padding:
-                                      const EdgeInsets.fromLTRB(10, 37, 10, 0),
+                                      const EdgeInsets.fromLTRB(10, 34, 10, 0),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,

@@ -1,5 +1,11 @@
 import 'dataModel.dart';
 
+Map photoSlider = {
+  "slider-1": "assets/img/homeSlider/slider.webp",
+  "slider-2":
+      "https://www.mbusa.com/content/dam/mb-nafta/ca/myco/my23/eqb-suv/gallery/series/gallery-class/2023-EQB-SUV-GAL-004-XL.jpg"
+};
+
 List<CarsModel> carsList = [
   CarsModel(
     nameCarFA: "اس ال",

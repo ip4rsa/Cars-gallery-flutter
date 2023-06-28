@@ -4,6 +4,7 @@ import 'package:localization/localization.dart';
 import 'package:merscedes_car/model/carsData.dart';
 import 'package:merscedes_car/model/dataModel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 class homePage extends StatefulWidget {
   @override
@@ -14,7 +15,7 @@ class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    double bodyMarginScreen = size.width / 22;
+    double bodyMarginScreen = size.width / 16;
     List images = [
       'assets/img/homeSlider/slider-1.webp',
       'assets/img/homeSlider/slider-2.webp',
@@ -32,6 +33,43 @@ class _homePageState extends State<homePage> {
         Locale('fa', ''), // persian
       ],
       home: Scaffold(
+        bottomNavigationBar: Container(
+          height: 100,
+          decoration: const BoxDecoration(
+              color: Color.fromARGB(255, 15, 15, 15),
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(25), topRight: Radius.circular(25))),
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: GNav(
+                backgroundColor: Color.fromARGB(255, 15, 15, 15),
+                gap: 15,
+                color: Color.fromARGB(255, 255, 255, 255),
+                activeColor: Colors.white,
+                tabBackgroundColor: Color.fromARGB(133, 74, 74, 74),
+                padding: EdgeInsets.all(15),
+                tabs: [
+                  GButton(
+                    icon: CupertinoIcons.house_alt,
+                    text: "خانه",
+                    textStyle: TextStyle(
+                        fontFamily: "yekanlight", color: Colors.white),
+                  ),
+                  GButton(
+                    icon: CupertinoIcons.car_detailed,
+                    text: "مرسدس ها",
+                    textStyle: TextStyle(
+                        fontFamily: "yekanlight", color: Colors.white),
+                  ),
+                  GButton(
+                    icon: CupertinoIcons.heart,
+                    text: "مرسدس های مورد علاقه",
+                    textStyle: TextStyle(
+                        fontFamily: "yekanlight", color: Colors.white),
+                  ),
+                ]),
+          ),
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -54,7 +92,7 @@ class _homePageState extends State<homePage> {
                     const Text(
                       "گالری مرسدس",
                       style: TextStyle(
-                        fontFamily: 'yekanBold',
+                        fontFamily: 'yekanmedum',
                         fontWeight: FontWeight.w100,
                         color: Color.fromARGB(255, 35, 35, 35),
                         fontSize: 25,
@@ -64,85 +102,33 @@ class _homePageState extends State<homePage> {
                 ),
               ),
 
-              const SizedBox(height: 20),
-
-              //------- Slider
-              Container(
-                width: 370,
-                height: 100,
-                child: CarouselSlider(
-                  options: CarouselOptions(
-                    height: 200,
-                    aspectRatio: 16 / 9,
-                    viewportFraction: 0.92,
-                    initialPage: 0,
-                    enableInfiniteScroll: true,
-                    reverse: false,
-                    autoPlay: true,
-                    autoPlayInterval: const Duration(seconds: 6),
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 1000),
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enlargeCenterPage: true,
-                    enlargeFactor: 0.3,
-                    scrollDirection: Axis.vertical,
-                  ),
-                  items: images.map((i) {
-                    return Builder(
-                      builder: (BuildContext context) {
-                        return Container(
-                          width: MediaQuery.of(context).size.width,
-                          margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                          decoration: BoxDecoration(
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color.fromARGB(106, 64, 64, 64),
-                                spreadRadius: 1,
-                                blurRadius: 1,
-                              ),
-                            ],
-                            borderRadius: BorderRadius.all(Radius.circular(15)),
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage(i),
-                            ),
-                          ),
-                        );
-                      },
-                    );
-                  }).toList(),
-                ),
-              ),
-
-              const SizedBox(height: 35),
+              const SizedBox(height: 30),
 
               //------- title list cars
               Padding(
-                padding: const EdgeInsets.fromLTRB(30, 0, 15, 7),
+                padding: const EdgeInsets.fromLTRB(30, 0, 17, 7),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     InkWell(
-                      onTap: () {},
-                      child: const Text(
-                        "همه",
+                        onTap: () {}, child: Icon(CupertinoIcons.arrow_left)),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 0),
+                      child: Text(
+                        "پر طرفدار ها",
                         style: TextStyle(
+                          height: 1.5,
                           fontFamily: 'yekanMedum',
-                          fontSize: 14,
-                          color: Color.fromARGB(255, 36, 90, 182),
+                          fontSize: 16,
                         ),
-                      ),
-                    ),
-                    const Text(
-                      "پر طرفدار ها",
-                      style: TextStyle(
-                        fontFamily: 'yekanMedum',
-                        fontSize: 16,
                       ),
                     ),
                   ],
                 ),
               ),
+
+              // SizedBox(height: 20),
 
               //------ Cars List
               Stack(
@@ -267,45 +253,7 @@ class _homePageState extends State<homePage> {
                 ],
               ),
 
-              const SizedBox(
-                height: 30,
-              ),
-
-              Container(
-                height: size.height / 8,
-                width: size.width / 1.09,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(23)),
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment(0.8, 1),
-                    colors: <Color>[
-                      Color.fromRGBO(0, 15, 19, 1),
-                      Color.fromARGB(253, 20, 30, 39),
-                    ],
-                  ),
-                ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Icon(
-                      CupertinoIcons.left_chevron,
-                      color: Colors.blueAccent,
-                      size: 40,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
-                      child: Text(
-                        "دانستی هایی در مورد شرکت مرسدس",
-                        style: TextStyle(
-                            fontSize: 19,
-                            fontFamily: 'yekanlight',
-                            color: Color.fromARGB(255, 255, 255, 255)),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              SizedBox(height: 20),
             ],
           ),
         ),

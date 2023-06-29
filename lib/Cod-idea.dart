@@ -89,3 +89,17 @@
               //     ],
               //   ),
               // ),
+
+
+
+
+    // List images = [
+    //   'assets/img/homeSlider/slider-1.webp',
+    //   'assets/img/homeSlider/slider-2.webp',
+    //   'assets/img/homeSlider/slider-3.webp',
+    //   'assets/img/homeSlider/slider-4.webp',
+    //   'assets/img/homeSlider/slider-5.webp',
+    //   'assets/img/homeSlider/slider-6.webp',
+    //   'assets/img/homeSlider/slider-7.webp',
+    //   'assets/img/homeSlider/slider-8.webp',
+    // ];

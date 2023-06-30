@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:merscedes_car/model/carsData.dart';
+import 'package:merscedes_car/carList.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:merscedes_car/view/carsList.dart';
 import 'package:merscedes_car/view/homePage.dart';
 
 class homePage extends StatefulWidget {
@@ -17,11 +16,10 @@ class _homePageState extends State<homePage> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     double bodyMarginScreen = size.width / 16;
-    final Function(int) changeScreen;
 
     List<Widget> maineScreenPage = [
       homeScreen(bodyMarginScreen: bodyMarginScreen, size: size),
-      carsPage(),
+      carList()
     ];
 
     return MaterialApp(
@@ -84,8 +82,8 @@ class btmNav extends StatelessWidget {
                     fontFamily: "yekanlight", color: Colors.white),
               ),
               const GButton(
-                icon: CupertinoIcons.heart,
-                text: "مرسدس های مورد علاقه",
+                icon: CupertinoIcons.photo_on_rectangle,
+                text: "گالری",
                 textStyle:
                     TextStyle(fontFamily: "yekanlight", color: Colors.white),
               ),

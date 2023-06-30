@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:merscedes_car/carList.dart';
 import '../model/carsData.dart';
-import 'carsList.dart';
 
 class homeScreen extends StatelessWidget {
   homeScreen({
@@ -225,10 +225,8 @@ class homeScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
                       child: InkWell(
-                        onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => carsPage())),
+                        onTap: () => Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => carList())),
                         child: const Text(
                           "تاریخچه شرکت مرسدس بنز",
                           style: TextStyle(

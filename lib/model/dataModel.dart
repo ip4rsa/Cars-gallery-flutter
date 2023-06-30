@@ -2,6 +2,7 @@ class CarsModel {
   String nameCarFA;
   String nameCarEN;
   String imgCar;
+  String imgCarPNG;
   String btnRedmore;
   String classCar;
   String articleCar;
@@ -19,6 +20,7 @@ class CarsModel {
     required this.nameCarFA,
     required this.nameCarEN,
     required this.imgCar,
+    required this.imgCarPNG,
     required this.classCar,
     required this.btnRedmore,
     required this.acceleration,

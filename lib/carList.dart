@@ -13,47 +13,39 @@ class _carListState extends State<carList> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
-              Positioned(
-                top: 0,
-                right: 0,
-                left: 0,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      InkWell(
-                        onTap: () {},
-                        child: const Padding(
-                          padding: EdgeInsets.all(1.0),
-                          child: Icon(
-                            CupertinoIcons.left_chevron,
-                            size: 27,
-                          ),
-                        ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    InkWell(
+                      onTap: () {},
+                      child: const Icon(
+                        CupertinoIcons.left_chevron,
+                        size: 27,
                       ),
-                      const Text(
-                        "لیست مرسدس ها",
-                        style: TextStyle(
-                          fontFamily: 'yekanmedum',
-                          fontWeight: FontWeight.w100,
-                          color: Color.fromARGB(255, 35, 35, 35),
-                          fontSize: 22,
-                        ),
+                    ),
+                    const Text(
+                      "لیست مرسدس ها",
+                      style: TextStyle(
+                        fontFamily: 'yekanmedum',
+                        fontWeight: FontWeight.w100,
+                        color: Color.fromARGB(255, 35, 35, 35),
+                        fontSize: 22,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               Container(
                 width: 375,
-                height: double.tryParse('940'),
+                height: double.tryParse('2050'),
                 child: ListView.builder(
-                  shrinkWrap: false,
-                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: carsList.length,
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context, index) {
@@ -178,7 +170,7 @@ class _carListState extends State<carList> {
                 ),
               ),
               const SizedBox(
-                height: 5,
+                height: 25,
               )
             ],
           ),

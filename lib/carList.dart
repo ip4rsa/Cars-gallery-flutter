@@ -36,7 +36,7 @@ class _carListState extends State<carList> {
                         ),
                       ),
                       const Text(
-                        "گالری مرسدس",
+                        "لیست مرسدس ها",
                         style: TextStyle(
                           fontFamily: 'yekanmedum',
                           fontWeight: FontWeight.w100,

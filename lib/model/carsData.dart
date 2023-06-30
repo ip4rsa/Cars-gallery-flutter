@@ -23,92 +23,7 @@ List<CarsModel> carsList = [
         "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my22/sl/class-page/amg/2022-SL-ROADSTER-CT-4-2-DR.mp4",
     passengerCapacity: "4 نفره",
     engin: "3982",
-    options: """کالیپر ترمز قرمز
-صندلی های جلو برقی با حافظه
-گرمکن و تهویه صندلی های جلو
-صندلی های جلو چند کانتور فعال با ماساژ
-صندلی های عقب دوتایی
-کنترل آب و هوای اتوماتیک دو منطقه ای
-سیستم گرمایش سطح گردن AIRSCARF
-بادگیر قابل جابجایی
-فرمان گرم کن
-آینه های جانبی تاشو برقی
-تاپ نرم برقی Z-fold
-نور محیطی LED 64 رنگ
-طاقچه های درب نورانی
-نمایشگر نور AMG
-تزئینات داشبورد، در و کنسول با دوخت بالا
-پدال های فولادی ضد زنگ برس خورده
-تجربه کاربری مرسدس بنز (MBUX)
-دسته ابزار دیجیتال 12.3 اینچی
-صفحه نمایش مولتی مدیا مرکزی 11.9 اینچی لمسی قابل تنظیم
-فرمان با دکمه های کنترل لمسی
-فرمان AMG Performance از چرم ناپا
-احراز هویت بیومتریک
-فعال سازی کلمه کلیدی "Hey, Mercedes".
-کنترل صدا با درک زبان طبیعی
-MB ناوبری
-به روز رسانی نقشه ناوبری آنلاین بدون هزینه به مدت 1 سال
-1 سال اطلاعات ترافیک زنده
-به‌روزرسانی‌های نرم‌افزاری از طریق هوا
-اپل کارپلی بی سیم
-بی سیم Android Auto
-سیستم FrontBass
-سیستم صدای فراگیر Burmester
-شارژ بی سیم با جفت شدن NFC
-وای فای داخل ماشین
-پخش آنلاین موسیقی
-اشتراک آزمایشی 6 ماهه پلاتینوم SiriusXM
-گیرنده رادیویی HD
-پخش صدای بلوتوث
-رابط بلوتوث هندزفری
-چندین پورت شارژ USB-C
-بدون کلید-GO
-دسترسی بدون دست
-صندوق عقب الکترونیکی
-سیستم ورودی روشن
-درب بازکن گاراژ
-موتور بیتوربو 4.0 لیتری V8 AMG دست ساز
-گیربکس 9 سرعته AMG SPEEDSHIFT MCT 9G
-AMG Performance 4MATIC+ چهار چرخ متحرک
-AMG DYNAMIC SELECT
-AMG DYNAMICS
-واحد درایو AMG
-سیستم ECO Start/Stop
-آیرودینامیک فعال AIRPANEL
-اسپویلر عقب فعال چند مرحله ای
-فرمان چرخ عقب فعال
-سیستم تعلیق 4 چرخ مولتی لینک
-سیستم تعلیق AMG RIDE CONTROL
-سیستم اگزوز AMG Performance
-سیستم ترمز ترکیبی با کارایی بالا AMG
-کالیپر ترمز قرمز
-ESP Dynamic Cornering Assist
-فرمان برق الکترومکانیکی
-ارتباط Car-to-X
-نوارهای رول پاپ آپ دوتایی
-پیش ایمن
-صدای پیش ایمن
-کمک توجه
-کمک باد متقابل
-دستیار ترمز فعال
-فناوری ترمز تطبیقی
-خدمات تماس اضطراری مرسدس بنز
-کمک نقطه کور با کمک هشدار خروج
-سیستم نمای فراگیر
-PARKTRONIC با دستیار پارک فعال
-چراغ های جلو LED فعال
-دستیار تطبیقی ​​نوربالا
-لامپ های LED در روز و چراغ های عقب
-10 عدد کیسه هوا
-SmartKey با KEYLESS-START
-ردیاب آسیب پارکینگ
-سیستم دزدگیر ضد سرقت
-سیستم ترمز ضد قفل (ABS)
-سیستم کمکی ترمز (BAS)
-برنامه پایداری الکترونیکی (ESP)
-سیستم مانیتورینگ فشار تایر پیشرفته
-برف پاک کن های حساس به باران""",
+    options: "",
     articleCar: "",
   ),
   CarsModel(
@@ -146,46 +61,7 @@ SmartKey با KEYLESS-START
         "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my22/gt-4dr-coupe/class-page/2022-AMG-GT-4DR-COUPE-CT-3-2-DR.mp4",
     passengerCapacity: "",
     engin: "3982",
-    options: """
-صندلی های عقب دوقلوی تاشو 40/40 تقسیم شده
-لیوان های عقب گرم شونده و خنک شونده 
-کنترل تهویه مطبوع اتوماتیک 3 منطقه ای
-Air Balance کابین - سیستم تصفیه هوا
-قابلیت گرمایش سریع برای صندلی های جلو
-دسته های جلو گرم کن و پانل های درب بالایی
-فرمان گرم کن
-دستیار فرمان فعال 
-دستیار فرمان فراری
-دستیار ترمز فعال با عملکرد ترافیک متقابل
-ترمز اضطراری ازدحام
-دستیار توقف اضطراری فعال  Active Emergency Stop Assist
-دستیار محدود سرعت فعال
-کمک نقطه کور فعال
- Active Lane Keeping Assist
-Active Lane Change Assist  اطلاعات بیشتر در مورد Active Lane Change Assist
- PRE-SAFE PLUS
-راه‌اندازی مجدد گسترده در ترافیک Stop-and-Go
-سازگاری سرعت مبتنی بر مسیر
-دستیار محدودیت سرعت  
-برنامه موبایل Mercedes me برای آیفون یا اندروید  
-شروع از راه دور  
-قفل / باز کردن درب از راه دور  
-شاخ و چراغ از راه دور  
-وضعیت خودرو از راه دور  
-دانلود POI  
-Geofencing، Valet و Curfew Protect  
-ردیاب خودرو  
-کمک مکان یابی خودروهای سرقتی  
-مکان یاب خودروی پارک شده  
-ارتباط Car-to-X  
-اطلاعات ترافیک زنده  
-پیکربندی خودرو از راه دور  
-ناوبری پیش بینی کننده  
-به روز رسانی آنلاین نقشه  
-پوشش نقشه آب و هوا  
-نقاط دیدنی پارکینگ  
-صفحه نمایش لمسی مرکزی کابین عقب
-""",
+    options: "",
     articleCar: "",
   ),
   CarsModel(
@@ -226,12 +102,124 @@ Geofencing، Valet و Curfew Protect
     options: """""",
     articleCar: "",
   ),
+  CarsModel(
+    nameCarFA: "جی ال اس",
+    nameCarEN: "GLS",
+    classCar: "شاسی بلند",
+    imgCar: "",
+    imgCarPNG: "assets/img/GLS/2022-GLS450-SUV-AVP-DR.png",
+    btnRedmore: 'more',
+    speed: "320",
+    power: "362 hp",
+    cityFuelEconomy: "18 mpg",
+    highwayFuelEconomy: "23 mpg",
+    acceleration: "5.9 ثانیه",
+    carVideo:
+        "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my23/gls/suv/class-page/series/2023-GLS-SUV-CT-3-6-DR.mp4",
+    passengerCapacity: "7 نفره",
+    engin: " 3 سیلندر توربو",
+    options: """""",
+    articleCar: "",
+  ),
+  CarsModel(
+    nameCarFA: "سی کلاس",
+    nameCarEN: "C-class",
+    classCar: "کوپه",
+    imgCar: "",
+    imgCarPNG: "assets/img/C-class/2022-C300-CABRIOLET-AVP-DR.png",
+    btnRedmore: "more",
+    speed: "320",
+    power: "255 hp",
+    cityFuelEconomy: "21 mpg",
+    highwayFuelEconomy: "30 mpg",
+    acceleration: "6.2 ثانیه",
+    carVideo:
+        "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my22/c/cab/class-page/series/2021-C-CABRIOLET-CT-3-2-DR.mp4",
+    passengerCapacity: "4 نفره",
+    engin: "2 سیلند",
+    options: """""",
+    articleCar: "",
+  ),
+  CarsModel(
+    nameCarFA: "اس کلاس",
+    nameCarEN: "S-class",
+    classCar: "واگن",
+    imgCar: "",
+    imgCarPNG: "assets/img/S-class/2022-S500-SEDAN-AVP-DR.png",
+    btnRedmore: "more",
+    speed: "320",
+    power: "362 hp",
+    cityFuelEconomy: "20 mpg",
+    highwayFuelEconomy: "29 mpg ",
+    acceleration: "4.4 ثانیه",
+    carVideo: "",
+    passengerCapacity: "5 نفره",
+    engin: "3 لیتری",
+    options: """""",
+    articleCar: "",
+  ),
+  CarsModel(
+    nameCarFA: "ای کیو ای",
+    nameCarEN: "EQE-Sedan",
+    classCar: "برقی",
+    imgCar: "",
+    imgCarPNG: "assets/img/EQE-Sedan/2023-EQE350-SEDAN-AVP-DR.png",
+    btnRedmore: "more",
+    speed: "320",
+    power: "329 hp",
+    cityFuelEconomy: "",
+    highwayFuelEconomy: "",
+    acceleration: "5.9 ثانیه",
+    carVideo: "",
+    passengerCapacity: "5 نفره",
+    engin: "",
+    options: """""",
+    articleCar: "",
+  ),
+  CarsModel(
+    nameCarFA: "جی ال سی",
+    nameCarEN: "GLC-SUV",
+    classCar: "SUV",
+    imgCar: "",
+    imgCarPNG: "assets/img/GLS/2022-GLS450-SUV-AVP-DR.png",
+    btnRedmore: "more",
+    speed: "320",
+    power: "255 hp",
+    cityFuelEconomy: "25 mpg",
+    highwayFuelEconomy: "32 mpg",
+    acceleration: "6.2 ثانیه",
+    carVideo: "",
+    passengerCapacity: "5 نفره",
+    engin: "2 سیلندر توربو",
+    options: """""",
+    articleCar: "",
+  ),
+  CarsModel(
+    nameCarFA: " میباخ GLS",
+    nameCarEN: "Mercedes-Maybach",
+    classCar: "شاسی بلند",
+    imgCar: "",
+    imgCarPNG: "assets/img/Mercedes-Maybach/2021-MAYBACH-GLS-SUV-AVP-DR.png",
+    btnRedmore: "more",
+    speed: "340",
+    power: "550 hp",
+    cityFuelEconomy: "15 mpg",
+    highwayFuelEconomy: "19 mpg Disclaimer",
+    acceleration: "4.8 ثانیه",
+    carVideo:
+        "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my22/gls/maybach/class-page/series/maybach-innovation-hero-video.mp4",
+    passengerCapacity: "4 نفره",
+    engin: "چهار لیتری - هشت توربو",
+    options: """""",
+    articleCar: "",
+  ),
   // CarsModel(
   //   nameCarFA: "",
   //   nameCarEN: "",
   //   classCar: "",
   //   imgCar: "",
-  //   btnRedmore: '',
+  //      imgCarPNG: "",
+  //   btnRedmore: "",
   //   speed: "",
   //   power: "",
   //   cityFuelEconomy: "",

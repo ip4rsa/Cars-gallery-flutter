@@ -194,7 +194,7 @@ class homeScreen extends StatelessWidget {
             ],
           ),
 
-          SizedBox(height: 20),
+          SizedBox(height: 50),
 
           //------ section 2 BTN ------
           Container(

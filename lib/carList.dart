@@ -73,7 +73,7 @@ class _carListState extends State<carList> {
                                     boxShadow: [
                                       BoxShadow(
                                         color:
-                                            Color.fromARGB(63, 208, 208, 208),
+                                            Color.fromARGB(82, 208, 208, 208),
                                         blurRadius: 16,
                                         spreadRadius: 3,
                                       ),

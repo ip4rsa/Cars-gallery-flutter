@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:merscedes_car/view/SplashScreen.dart';
 
 void main() {

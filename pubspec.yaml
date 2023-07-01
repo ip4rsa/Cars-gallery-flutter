@@ -78,6 +78,10 @@ flutter:
     - assets/img/Mercedes-Maybach/
     - assets/img/S-class/
     - assets/img/C-class/
+    - assets/img/E-class/
+    - assets/img/GLE/
+    - assets/img/A-class/
+    - assets/img/EQS/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

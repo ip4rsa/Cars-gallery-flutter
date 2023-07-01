@@ -17,7 +17,7 @@ class _carListState extends State<carList> {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                padding: const EdgeInsets.fromLTRB(20, 25, 20, 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -42,7 +42,7 @@ class _carListState extends State<carList> {
               ),
               Container(
                 width: 375,
-                height: double.tryParse('2050'),
+                height: double.tryParse('2800'),
                 child: ListView.builder(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
@@ -72,7 +72,7 @@ class _carListState extends State<carList> {
                                     ]),
                                 child: Padding(
                                   padding:
-                                      const EdgeInsets.fromLTRB(0, 15, 20, 0),
+                                      const EdgeInsets.fromLTRB(0, 10, 20, 0),
                                   child: Column(
                                     children: [
                                       Row(

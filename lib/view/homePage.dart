@@ -21,7 +21,7 @@ class homeScreen extends StatelessWidget {
         children: [
           //------ App Bar ------
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 43, 20, 0),
+            padding: const EdgeInsets.fromLTRB(20, 45, 20, 0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -194,7 +194,7 @@ class homeScreen extends StatelessWidget {
             ],
           ),
 
-          SizedBox(height: 50),
+          const SizedBox(height: 45),
 
           //------ section 2 BTN ------
           Container(
@@ -255,7 +255,7 @@ class homeScreen extends StatelessWidget {
                       color: Colors.blueAccent,
                       size: 30,
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Padding(
                       padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
                       child: InkWell(
@@ -274,7 +274,7 @@ class homeScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: size.height / 19),
         ],
       ),
     );

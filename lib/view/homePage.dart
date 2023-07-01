@@ -107,7 +107,7 @@ class homeScreen extends StatelessWidget {
                           child: Column(
                             children: [
                               Padding(
-                                padding: EdgeInsets.fromLTRB(15, 13, 15, 0),
+                                padding: EdgeInsets.fromLTRB(15, 10, 15, 0),
                                 child: Padding(
                                   padding: const EdgeInsets.only(top: 2),
                                   child: Row(

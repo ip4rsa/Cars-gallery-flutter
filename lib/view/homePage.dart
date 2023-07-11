@@ -79,8 +79,8 @@ class homeScreen extends StatelessWidget {
               SizedBox(
                 height: 265,
                 child: ListView.builder(
-                  physics: BouncingScrollPhysics(),
-                  itemCount: carsList.length,
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: carsList.getRange(0, 5).length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     return Padding(

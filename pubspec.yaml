@@ -30,7 +30,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  localization: ^2.1.0
   flutter_spinkit: ^5.2.0
 
 

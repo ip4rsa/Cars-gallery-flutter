@@ -195,7 +195,7 @@ List<CarsModel> carsList = [
     articleCar: "",
   ),
   CarsModel(
-    nameCarFA: " میباخ GLS",
+    nameCarFA: "میباخ",
     nameCarEN: "Mercedes-Maybach",
     classCar: "شاسی بلند",
     imgCar: "",

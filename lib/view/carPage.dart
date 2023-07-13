@@ -44,7 +44,7 @@ class CarPage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
+        physics: PageScrollPhysics(),
         child: Column(
           children: [
             const SizedBox(height: 20),
@@ -112,14 +112,41 @@ class CarPage extends StatelessWidget {
                             topRight: Radius.circular(40))),
                     height: 700,
                     width: double.infinity,
-                    child: const Padding(
-                      padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          SizedBox(height: 70),
-                          Text('مشخصات'),
-                          Text("data"),
+                          const SizedBox(height: 70),
+                          SizedBox(
+                            height: 130,
+                            child: ListView.builder(
+                              physics: const BouncingScrollPhysics(),
+                              scrollDirection: Axis.horizontal,
+                              itemCount: 10,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                      width: 150,
+                                      height: 30,
+                                      decoration: const BoxDecoration(
+                                        color: Color.fromARGB(255, 59, 59, 59),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(20)),
+                                      ),
+                                      child: const Column(
+                                        children: [
+                                          Icon(
+                                            CupertinoIcons.battery_charging,
+                                            color: Colors.white,
+                                          )
+                                        ],
+                                      )),
+                                );
+                              },
+                            ),
+                          ),
                         ],
                       ),
                     ),

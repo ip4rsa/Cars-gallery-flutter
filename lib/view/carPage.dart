@@ -44,7 +44,7 @@ class CarPage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        physics: PageScrollPhysics(),
+        physics: const PageScrollPhysics(),
         child: Column(
           children: [
             const SizedBox(height: 20),
@@ -121,28 +121,29 @@ class CarPage extends StatelessWidget {
                           SizedBox(
                             height: 130,
                             child: ListView.builder(
-                              physics: const BouncingScrollPhysics(),
+                              physics: const PageScrollPhysics(),
                               scrollDirection: Axis.horizontal,
                               itemCount: 10,
                               itemBuilder: (context, index) {
                                 return Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Container(
-                                      width: 150,
-                                      height: 30,
-                                      decoration: const BoxDecoration(
-                                        color: Color.fromARGB(255, 59, 59, 59),
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(20)),
-                                      ),
-                                      child: const Column(
-                                        children: [
-                                          Icon(
-                                            CupertinoIcons.battery_charging,
-                                            color: Colors.white,
-                                          )
-                                        ],
-                                      )),
+                                    width: 150,
+                                    height: 30,
+                                    decoration: const BoxDecoration(
+                                      color: Color.fromARGB(255, 59, 59, 59),
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(20)),
+                                    ),
+                                    child: const Column(
+                                      children: [
+                                        Icon(
+                                          CupertinoIcons.battery_charging,
+                                          color: Colors.white,
+                                        )
+                                      ],
+                                    ),
+                                  ),
                                 );
                               },
                             ),

@@ -103,7 +103,7 @@ class CarPage extends StatelessWidget {
             Stack(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: Container(
                     decoration: const BoxDecoration(
                         color: Color.fromARGB(255, 211, 211, 211),
@@ -112,27 +112,34 @@ class CarPage extends StatelessWidget {
                             topRight: Radius.circular(40))),
                     height: 700,
                     width: double.infinity,
-                    child: const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [],
+                    child: const Padding(
+                      padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          SizedBox(height: 70),
+                          Text('مشخصات'),
+                          Text("data"),
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 Center(
                   child: Container(
                     width: 220,
-                    height: 50,
+                    height: 70,
                     decoration: const BoxDecoration(
                         color: Color.fromARGB(255, 250, 250, 250),
-                        borderRadius: BorderRadius.all(Radius.circular(20))),
+                        borderRadius: BorderRadius.all(Radius.circular(30))),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(7.0),
+                          padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                           child: Container(
-                            width: 20,
-                            height: 20,
+                            width: 23,
+                            height: 23,
                             decoration: const BoxDecoration(
                               color: Color.fromARGB(255, 223, 213, 24),
                               shape: BoxShape.circle,
@@ -140,10 +147,10 @@ class CarPage extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(7.0),
+                          padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                           child: Container(
-                            width: 20,
-                            height: 20,
+                            width: 23,
+                            height: 23,
                             decoration: const BoxDecoration(
                               color: Color.fromARGB(255, 20, 89, 173),
                               shape: BoxShape.circle,
@@ -151,10 +158,10 @@ class CarPage extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(7.0),
+                          padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                           child: Container(
-                            width: 20,
-                            height: 20,
+                            width: 23,
+                            height: 23,
                             decoration: const BoxDecoration(
                               color: Color.fromARGB(255, 0, 0, 0),
                               shape: BoxShape.circle,
@@ -162,10 +169,10 @@ class CarPage extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(7.0),
+                          padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                           child: Container(
-                            width: 20,
-                            height: 20,
+                            width: 23,
+                            height: 23,
                             decoration: const BoxDecoration(
                               color: Color.fromARGB(255, 186, 186, 186),
                               shape: BoxShape.circle,

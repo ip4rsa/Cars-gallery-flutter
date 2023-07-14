@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:merscedes_car/carList.dart';
 import 'package:merscedes_car/model/carsData.dart';
+import 'package:merscedes_car/model/infoCarsData.dart';
+import 'package:merscedes_car/model/infoCarsModel.dart';
 
 class CarPage extends StatelessWidget {
   const CarPage({super.key});
@@ -123,7 +126,7 @@ class CarPage extends StatelessWidget {
                             child: ListView.builder(
                               physics: const PageScrollPhysics(),
                               scrollDirection: Axis.horizontal,
-                              itemCount: 10,
+                              itemCount: infoCarModel.length,
                               itemBuilder: (context, index) {
                                 return Padding(
                                   padding: const EdgeInsets.all(8.0),
@@ -135,13 +138,16 @@ class CarPage extends StatelessWidget {
                                       borderRadius:
                                           BorderRadius.all(Radius.circular(20)),
                                     ),
-                                    child: const Column(
-                                      children: [
-                                        Icon(
-                                          CupertinoIcons.battery_charging,
-                                          color: Colors.white,
-                                        )
-                                      ],
+                                    child: Center(
+                                      child: Column(
+                                        children: [
+                                          SvgPicture.asset(
+                                            infoCarModel[index].engin,
+                                            height: 50,
+                                          ),
+                                          Text('data')
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 );

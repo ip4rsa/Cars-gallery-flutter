@@ -40,6 +40,7 @@ dependencies:
   carousel_slider: ^4.2.1
   awesome_bottom_bar: ^1.2.2
   google_nav_bar: ^5.0.6
+  flutter_svg: ^2.0.7
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +82,7 @@ flutter:
     - assets/img/GLE/
     - assets/img/A-class/
     - assets/img/EQS/
+    - assets/img/InfoSVG
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

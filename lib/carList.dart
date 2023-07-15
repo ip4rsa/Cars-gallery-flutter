@@ -66,18 +66,31 @@ class _carListState extends State<carList> {
                                             scale: 3.7,
                                           ),
                                         ),
-                                        Padding(
-                                          padding: const EdgeInsets.fromLTRB(
-                                              0, 0, 11, 0),
-                                          child: Text(
-                                            carsList[index].nameCarFA,
-                                            style: const TextStyle(
-                                              color:
-                                                  Color.fromARGB(255, 0, 0, 0),
-                                              fontSize: 20,
-                                              fontFamily: 'yekanmedum',
+                                        Column(
+                                          children: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.fromLTRB(
+                                                      0, 0, 11, 0),
+                                              child: Text(
+                                                carsList[index].nameCarFA,
+                                                style: const TextStyle(
+                                                  color: Color.fromARGB(
+                                                      255, 0, 0, 0),
+                                                  fontSize: 20,
+                                                  fontFamily: 'yekanmedum',
+                                                ),
+                                              ),
                                             ),
-                                          ),
+                                            const SizedBox(height: 7),
+                                            Text(
+                                              carsList[index].classCar,
+                                              style: const TextStyle(
+                                                fontFamily: 'yekanlight',
+                                                fontSize: 14,
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ],
                                     ),

@@ -82,7 +82,7 @@ flutter:
     - assets/img/GLE/
     - assets/img/A-class/
     - assets/img/EQS/
-    - assets/img/InfoSVG
+    - assets/img/InfoSVG/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

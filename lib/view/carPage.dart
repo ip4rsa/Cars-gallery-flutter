@@ -217,7 +217,199 @@ class CarPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                // Container(
+                //   width: 100,
+                //   height: 200,
+                //   color: Colors.amber,
+                //   child: ListView(
+                //     children: [
+                //       ListTile(title: Text("Item 1")),
+                //       SizedBox(width: 10),
+                //       ListTile(title: Text("Item 2")),
+                //       ListTile(title: Text("Item 3")),
+                //       ListTile(title: Text("Item 4")),
+                //       ListTile(title: Text("Item 5")),
+                //       ListTile(title: Text("Item 6")),
+                //       ListTile(title: Text("Item 7")),
+                //       ListTile(title: Text("Item 8")),
+                //     ],
+                //   ),
+                // ),
               ],
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              physics: BouncingScrollPhysics(),
+              child: SizedBox(
+                height: 100,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 150,
+                        height: 30,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 59, 59, 59),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: Center(
+                          child: Column(
+                            children: [Text('data')],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 150,
+                        height: 30,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 59, 59, 59),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: Center(
+                          child: Column(
+                            children: [Text('data')],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 150,
+                        height: 30,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 59, 59, 59),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: Center(
+                          child: Column(
+                            children: [Text('data')],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 150,
+                        height: 30,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 59, 59, 59),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: Center(
+                          child: Column(
+                            children: [Text('data')],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 150,
+                        height: 30,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 59, 59, 59),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: Center(
+                          child: Column(
+                            children: [Text('data')],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 150,
+                        height: 30,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 59, 59, 59),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: Center(
+                          child: Column(
+                            children: [Text('data')],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 150,
+                        height: 30,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 59, 59, 59),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: Center(
+                          child: Column(
+                            children: [Text('data')],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 150,
+                        height: 30,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 59, 59, 59),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: Center(
+                          child: Column(
+                            children: [Text('data')],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 150,
+                        height: 30,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 59, 59, 59),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: Center(
+                          child: Column(
+                            children: [Text('data')],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                  ],
+                ),
+              ),
             ),
           ],
         ),

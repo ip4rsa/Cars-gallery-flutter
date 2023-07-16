@@ -158,9 +158,7 @@ class _carListState extends State<carList> {
                     );
                   },
                 ),
-                const SizedBox(
-                  height: 18,
-                )
+                const SizedBox(height: 18),
               ],
             ),
           ),

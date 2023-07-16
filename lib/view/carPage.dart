@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:merscedes_car/carList.dart';
 import 'package:merscedes_car/model/carsData.dart';
+import 'package:merscedes_car/model/dataModel.dart';
 import 'package:merscedes_car/model/infoCarsData.dart';
 import 'package:merscedes_car/model/infoCarsModel.dart';
 
@@ -217,45 +218,40 @@ class CarPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                // Container(
-                //   width: 100,
-                //   height: 200,
-                //   color: Colors.amber,
-                //   child: ListView(
-                //     children: [
-                //       ListTile(title: Text("Item 1")),
-                //       SizedBox(width: 10),
-                //       ListTile(title: Text("Item 2")),
-                //       ListTile(title: Text("Item 3")),
-                //       ListTile(title: Text("Item 4")),
-                //       ListTile(title: Text("Item 5")),
-                //       ListTile(title: Text("Item 6")),
-                //       ListTile(title: Text("Item 7")),
-                //       ListTile(title: Text("Item 8")),
-                //     ],
-                //   ),
-                // ),
               ],
             ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               physics: BouncingScrollPhysics(),
               child: SizedBox(
-                height: 100,
+                height: 130,
                 child: Row(
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         width: 150,
-                        height: 30,
+                        height: 140,
                         decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 59, 59, 59),
+                          color: Color.fromARGB(255, 38, 38, 38),
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                         ),
                         child: Center(
                           child: Column(
-                            children: [Text('data')],
+                            children: [
+                              SvgPicture.asset(
+                                'assets/img/InfoSVG/engine-motor-svgrepo-com (1).svg',
+                                height: 50,
+                              ),
+                              const SizedBox(height: 10),
+                              Text(
+                                carsList[DateTime.may].engin,
+                                style: const TextStyle(
+                                  fontFamily: 'yekanlight',
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -264,14 +260,27 @@ class CarPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         width: 150,
-                        height: 30,
+                        height: 140,
                         decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 59, 59, 59),
+                          color: Color.fromARGB(255, 38, 38, 38),
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                         ),
                         child: Center(
                           child: Column(
-                            children: [Text('data')],
+                            children: [
+                              SvgPicture.asset(
+                                'assets/img/InfoSVG/timer-svgrepo-com.svg',
+                                height: 50,
+                              ),
+                              const SizedBox(height: 10),
+                              Text(
+                                carsList[DateTime.may].engin,
+                                style: const TextStyle(
+                                  fontFamily: 'yekanlight',
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -280,14 +289,30 @@ class CarPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         width: 150,
-                        height: 30,
+                        height: 140,
                         decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 59, 59, 59),
+                          color: Color.fromARGB(255, 38, 38, 38),
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                         ),
                         child: Center(
-                          child: Column(
-                            children: [Text('data')],
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              children: [
+                                SvgPicture.asset(
+                                  'assets/img/InfoSVG/power-svgrepo-com.svg',
+                                  height: 40,
+                                ),
+                                const SizedBox(height: 10),
+                                Text(
+                                  carsList[DateTime.may].engin,
+                                  style: const TextStyle(
+                                    fontFamily: 'yekanlight',
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -296,117 +321,31 @@ class CarPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         width: 150,
-                        height: 30,
+                        height: 140,
                         decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 59, 59, 59),
+                          color: Color.fromARGB(255, 38, 38, 38),
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                         ),
                         child: Center(
                           child: Column(
-                            children: [Text('data')],
+                            children: [
+                              SvgPicture.asset(
+                                'assets/img/InfoSVG/highway-svgrepo-com.svg',
+                                height: 50,
+                              ),
+                              const SizedBox(height: 10),
+                              Text(
+                                carsList[DateTime.may].engin,
+                                style: const TextStyle(
+                                  fontFamily: 'yekanlight',
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 150,
-                        height: 30,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 59, 59, 59),
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: Center(
-                          child: Column(
-                            children: [Text('data')],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 150,
-                        height: 30,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 59, 59, 59),
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: Center(
-                          child: Column(
-                            children: [Text('data')],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 150,
-                        height: 30,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 59, 59, 59),
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: Center(
-                          child: Column(
-                            children: [Text('data')],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 150,
-                        height: 30,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 59, 59, 59),
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: Center(
-                          child: Column(
-                            children: [Text('data')],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 150,
-                        height: 30,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 59, 59, 59),
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: Center(
-                          child: Column(
-                            children: [Text('data')],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
                   ],
                 ),
               ),

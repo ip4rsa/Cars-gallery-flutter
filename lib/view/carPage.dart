@@ -4,8 +4,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:merscedes_car/carList.dart';
 import 'package:merscedes_car/model/carsData.dart';
 import 'package:merscedes_car/model/dataModel.dart';
-import 'package:merscedes_car/model/infoCarsData.dart';
-import 'package:merscedes_car/model/infoCarsModel.dart';
 
 class CarPage extends StatelessWidget {
   const CarPage({super.key});

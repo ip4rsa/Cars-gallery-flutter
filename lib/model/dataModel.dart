@@ -15,6 +15,7 @@ class CarsModel {
   String cityFuelEconomy;
   String highwayFuelEconomy;
   String engin;
+  String id;
 
   CarsModel({
     required this.nameCarFA,
@@ -33,5 +34,6 @@ class CarsModel {
     required this.highwayFuelEconomy,
     required this.passengerCapacity,
     required this.engin,
+    required this.id,
   });
 }

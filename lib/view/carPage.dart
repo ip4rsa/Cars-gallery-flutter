@@ -114,45 +114,181 @@ class CarPage extends StatelessWidget {
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(40),
                             topRight: Radius.circular(40))),
-                    height: 700,
+                    height: 850,
                     width: double.infinity,
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                      padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           const SizedBox(height: 70),
                           SizedBox(
                             height: 130,
-                            child: ListView.builder(
-                              physics: const PageScrollPhysics(),
+                            child: SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
-                              itemCount: infoCarModel.length,
-                              itemBuilder: (context, index) {
-                                return Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    width: 150,
-                                    height: 30,
-                                    decoration: const BoxDecoration(
-                                      color: Color.fromARGB(255, 59, 59, 59),
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(20)),
-                                    ),
-                                    child: Center(
-                                      child: Column(
-                                        children: [
-                                          SvgPicture.asset(
-                                            infoCarModel[index].engin,
-                                            height: 50,
+                              physics: const BouncingScrollPhysics(),
+                              child: SizedBox(
+                                height: 130,
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        width: 150,
+                                        height: 140,
+                                        decoration: const BoxDecoration(
+                                          color:
+                                              Color.fromARGB(255, 38, 38, 38),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20)),
+                                        ),
+                                        child: Center(
+                                          child: Column(
+                                            children: [
+                                              SvgPicture.asset(
+                                                'assets/img/InfoSVG/engine-motor-svgrepo-com (1).svg',
+                                                height: 50,
+                                              ),
+                                              const SizedBox(height: 10),
+                                              Text(
+                                                carsList[DateTime.may].engin,
+                                                style: const TextStyle(
+                                                  fontFamily: 'yekanlight',
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                          Text('data')
-                                        ],
+                                        ),
                                       ),
                                     ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        width: 150,
+                                        height: 140,
+                                        decoration: const BoxDecoration(
+                                          color:
+                                              Color.fromARGB(255, 38, 38, 38),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20)),
+                                        ),
+                                        child: Center(
+                                          child: Column(
+                                            children: [
+                                              SvgPicture.asset(
+                                                'assets/img/InfoSVG/timer-svgrepo-com.svg',
+                                                height: 50,
+                                              ),
+                                              const SizedBox(height: 10),
+                                              Text(
+                                                carsList[DateTime.may].engin,
+                                                style: const TextStyle(
+                                                  fontFamily: 'yekanlight',
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        width: 150,
+                                        height: 140,
+                                        decoration: const BoxDecoration(
+                                          color:
+                                              Color.fromARGB(255, 38, 38, 38),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20)),
+                                        ),
+                                        child: Center(
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Column(
+                                              children: [
+                                                SvgPicture.asset(
+                                                  'assets/img/InfoSVG/power-svgrepo-com.svg',
+                                                  height: 40,
+                                                ),
+                                                const SizedBox(height: 10),
+                                                Text(
+                                                  carsList[DateTime.april]
+                                                      .engin,
+                                                  style: const TextStyle(
+                                                    fontFamily: 'yekanlight',
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        width: 150,
+                                        height: 140,
+                                        decoration: const BoxDecoration(
+                                          color:
+                                              Color.fromARGB(255, 38, 38, 38),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20)),
+                                        ),
+                                        child: Center(
+                                          child: Column(
+                                            children: [
+                                              SvgPicture.asset(
+                                                'assets/img/InfoSVG/highway-svgrepo-com.svg',
+                                                height: 50,
+                                              ),
+                                              const SizedBox(height: 20),
+                                              Text(
+                                                carsList[DateTime.september]
+                                                    .classCar,
+                                                style: const TextStyle(
+                                                  fontFamily: 'yekanlight',
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          const Padding(
+                            padding: EdgeInsets.fromLTRB(20, 0, 10, 0),
+                            child: Column(
+                              children: [
+                                Text(
+                                  "توضیحات",
+                                  style: TextStyle(
+                                    fontFamily: 'yekanbold',
+                                    fontSize: 20,
                                   ),
-                                );
-                              },
+                                ),
+                                Text(
+                                  """
+                          
+                          چند ماه پیش جدیدترین قسمت از مجموعه بازی‌های اساسینز کرید عرضه شد. بازی اساسینز کرید والهالا ماجرای قاتلان تاریخی را در سرزمین وایکینگ‌ها روایت می‌کند و تفاوت عظیمی با بازی‌های اصلی این سری دارد. البته چیزی که در این بازی حاضر هست و در دیگر بازی‌های این سری هم همیشه موجود بوده، حجم بالایی از محتوای مخفی و رازهای عجیب و غریب است. قصد داریم تا نگاهی به آن‌ها داشته باشیم تا در صورتی که آن‌ها را ندیده‌اید، غافل نمانید.
+                          
+                          سری بازی‌های اساسینز کرید این روز‌ها شباهت بیش‌تری به بازی‌های نقش‌آفرینی دارند تا اساسینز کرید. گیم‌پلی این بازی‌ها تا حد زیادی تغییر کرده و المان‌های نقش‌آفرینی زیادی به آن‌ها اضافه شده. بازی اساسینز کرید والهالا همانند بازی‌های نقش‌آفرینی بسیار بزرگ شده و جارو کردن دنیای پهناور آن بیش‌تر از صد ساعت زمان می‌خواهد. در میان این نقشه‌ی بزرگ، نکات مخفی زیادی که در جوامع گیمرها به آن‌ها «ایستر اگ» (Easter Egg) گفته می‌شود وجود دارند.
+                          
+                          """,
+                                  style: TextStyle(
+                                      fontFamily: 'yekanLight', fontSize: 16),
+                                ),
+                              ],
                             ),
                           ),
                         ],
@@ -209,7 +345,7 @@ class CarPage extends StatelessWidget {
                             width: 23,
                             height: 23,
                             decoration: const BoxDecoration(
-                              color: Color.fromARGB(255, 186, 186, 186),
+                              color: Color.fromARGB(255, 133, 67, 67),
                               shape: BoxShape.circle,
                             ),
                           ),
@@ -219,136 +355,6 @@ class CarPage extends StatelessWidget {
                   ),
                 ),
               ],
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              physics: BouncingScrollPhysics(),
-              child: SizedBox(
-                height: 130,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 150,
-                        height: 140,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 38, 38, 38),
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: Center(
-                          child: Column(
-                            children: [
-                              SvgPicture.asset(
-                                'assets/img/InfoSVG/engine-motor-svgrepo-com (1).svg',
-                                height: 50,
-                              ),
-                              const SizedBox(height: 10),
-                              Text(
-                                carsList[DateTime.may].engin,
-                                style: const TextStyle(
-                                  fontFamily: 'yekanlight',
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 150,
-                        height: 140,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 38, 38, 38),
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: Center(
-                          child: Column(
-                            children: [
-                              SvgPicture.asset(
-                                'assets/img/InfoSVG/timer-svgrepo-com.svg',
-                                height: 50,
-                              ),
-                              const SizedBox(height: 10),
-                              Text(
-                                carsList[DateTime.may].engin,
-                                style: const TextStyle(
-                                  fontFamily: 'yekanlight',
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 150,
-                        height: 140,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 38, 38, 38),
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: Center(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: [
-                                SvgPicture.asset(
-                                  'assets/img/InfoSVG/power-svgrepo-com.svg',
-                                  height: 40,
-                                ),
-                                const SizedBox(height: 10),
-                                Text(
-                                  carsList[DateTime.may].engin,
-                                  style: const TextStyle(
-                                    fontFamily: 'yekanlight',
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 150,
-                        height: 140,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 38, 38, 38),
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: Center(
-                          child: Column(
-                            children: [
-                              SvgPicture.asset(
-                                'assets/img/InfoSVG/highway-svgrepo-com.svg',
-                                height: 50,
-                              ),
-                              const SizedBox(height: 10),
-                              Text(
-                                carsList[DateTime.may].engin,
-                                style: const TextStyle(
-                                  fontFamily: 'yekanlight',
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
             ),
           ],
         ),

@@ -3,6 +3,9 @@
 - Mercedes-Benz cars gallery application <br>
   using Dart and Flutter <br>
   being completed...
+## screen shot
+![Screenshot 2023-07-26 150039](https://github.com/ip4rsa/Cars-gallery-flutter/assets/117844346/47deeb1a-e10f-46c8-8c7f-2da4b062978d)
+
 
 ## Getting Started
 

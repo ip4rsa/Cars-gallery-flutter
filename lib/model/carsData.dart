@@ -101,8 +101,8 @@ List<CarsModel> carsList = [
     acceleration: "4.5 ثانیه",
     carVideo:
         "https://www.mercedes-amg.com/en/vehicles/cls/coupe/_jcr_content/stage/media/slides/slide_copy_copy/media1/video.video.20210406160320.mp4",
-    passengerCapacity: "",
-    engin: "3.0 لیتری 6 توربو خطی با محرک هیبریدی ملایم",
+    passengerCapacity: "نفره 5",
+    engin: "3.0 لیتری 6 توربو خطی با محرک هیبریدی",
     options: """""",
     articleCar: "",
     id: "5",

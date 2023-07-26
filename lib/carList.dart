@@ -5,9 +5,6 @@ import 'package:merscedes_car/model/carsData.dart';
 import 'package:merscedes_car/view/carPage.dart';
 
 class carList extends StatefulWidget {
-  final carList car;
-  carList({required this.car});
-
   @override
   State<carList> createState() => _carListState();
 }
@@ -37,7 +34,8 @@ class _carListState extends State<carList> {
                             onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => CarPage(),
+                                builder: (context) =>
+                                    CarPage(car: carsList[index]),
                               ),
                             ),
                             child: Container(

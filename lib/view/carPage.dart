@@ -17,7 +17,6 @@ class CarPage extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
           child: AppBar(
             automaticallyImplyLeading: false,
-            // final Object? carId = ModalRoute.of(context)?.settings.arguments;
             backgroundColor: const Color.fromARGB(255, 250, 250, 250),
             elevation: 0,
             title: Row(
@@ -50,7 +49,7 @@ class CarPage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        physics: const PageScrollPhysics(),
+        physics: ClampingScrollPhysics(),
         child: Column(
           children: [
             const SizedBox(height: 20),
@@ -86,7 +85,7 @@ class CarPage extends StatelessWidget {
                           fontSize: 20,
                           fontWeight: FontWeight.w600),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Text(car.acceleration),
                   ],
                 ),
@@ -128,7 +127,7 @@ class CarPage extends StatelessWidget {
                             height: 130,
                             child: SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
-                              physics: const BouncingScrollPhysics(),
+                              physics: const PageScrollPhysics(),
                               child: SizedBox(
                                 height: 130,
                                 child: Row(

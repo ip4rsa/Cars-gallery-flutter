@@ -156,12 +156,17 @@ class CarPage extends StatelessWidget {
                                                 height: 40,
                                               ),
                                               const SizedBox(height: 10),
-                                              Text(
-                                                car.engin,
-                                                style: const TextStyle(
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    right: 5, left: 5),
+                                                child: Text(
+                                                  car.engin,
+                                                  style: const TextStyle(
                                                     fontFamily: 'yekanlight',
                                                     color: Colors.white,
-                                                    fontSize: 18),
+                                                    fontSize: 18,
+                                                  ),
+                                                ),
                                               ),
                                             ],
                                           ),
@@ -275,7 +280,7 @@ class CarPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 10),
+                          const SizedBox(height: 22),
                           const Padding(
                             padding: EdgeInsets.fromLTRB(20, 0, 10, 0),
                             child: Column(

@@ -284,7 +284,8 @@ List<CarsModel> carsList = [
     id: "14",
   ),
   CarsModel(
-    nameCarFA: "ای کیو اس",
+    nameCarFA: "کیو اس",
+    // nameCarFA: "ای کیو اس",
     nameCarEN: "EQS-Sedan",
     classCar: "sedan",
     imgCar: "",

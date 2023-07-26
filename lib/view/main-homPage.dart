@@ -24,9 +24,6 @@ class _homePageState extends State<homePage> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // supportedLocales: const [
-      //   Locale('fa', ''), // persian
-      // ],
       home: Scaffold(
         bottomNavigationBar: btmNav(changeScreen: (int value) {
           setState(() {

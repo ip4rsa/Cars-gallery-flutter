@@ -6,7 +6,9 @@ import 'package:merscedes_car/model/carsData.dart';
 import 'package:merscedes_car/model/dataModel.dart';
 
 class CarPage extends StatelessWidget {
-  const CarPage({super.key});
+  //کانشتراکتور---------------------------------
+  final CarsModel car;
+  CarPage({super.key, required this.car});
 
   @override
   Widget build(BuildContext context) {
@@ -17,29 +19,33 @@ class CarPage extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
           child: AppBar(
             automaticallyImplyLeading: false,
+            // final Object? carId = ModalRoute.of(context)?.settings.arguments;
             backgroundColor: const Color.fromARGB(255, 250, 250, 250),
             elevation: 0,
-            title: const Row(
+            title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Icon(
-                  CupertinoIcons.left_chevron,
-                  color: Color.fromARGB(255, 61, 61, 61),
-                  size: 35,
+                InkWell(
+                  onTap: () => Navigator.pop(context),
+                  child: const Icon(
+                    CupertinoIcons.left_chevron,
+                    color: Color.fromARGB(255, 61, 61, 61),
+                    size: 35,
+                  ),
                 ),
-                Expanded(child: SizedBox()),
+                const Expanded(child: SizedBox()),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                   child: Text(
-                    'مرسدس',
-                    style: TextStyle(
+                    car.nameCarFA,
+                    style: const TextStyle(
                         color: Color.fromARGB(255, 61, 61, 61),
                         fontFamily: 'yekanlight',
                         fontWeight: FontWeight.w700,
-                        fontSize: 34),
+                        fontSize: 30),
                   ),
                 ),
-                Expanded(child: SizedBox()),
+                const Expanded(child: SizedBox()),
               ],
             ),
           ),
@@ -52,30 +58,30 @@ class CarPage extends StatelessWidget {
             const SizedBox(height: 20),
             Center(
               child: Image.asset(
-                'assets/img/AMG-SL/silver.png',
+                car.imgCarPNG,
                 scale: 2.5,
               ),
             ),
             const SizedBox(height: 20),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       "سرعت",
                       style: TextStyle(
                           fontFamily: 'yekanlight',
                           fontSize: 20,
                           fontWeight: FontWeight.w600),
                     ),
-                    SizedBox(height: 10),
-                    Text("410"),
+                    const SizedBox(height: 10),
+                    Text(car.speed),
                   ],
                 ),
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       "صفر تا صد",
                       style: TextStyle(
                           fontFamily: 'yekanlight',
@@ -83,20 +89,20 @@ class CarPage extends StatelessWidget {
                           fontWeight: FontWeight.w600),
                     ),
                     SizedBox(height: 10),
-                    Text("2.7"),
+                    Text(car.acceleration),
                   ],
                 ),
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       "قدرت",
                       style: TextStyle(
                           fontFamily: 'yekanlight',
                           fontSize: 20,
                           fontWeight: FontWeight.w600),
                     ),
-                    SizedBox(height: 10),
-                    Text("3800"),
+                    const SizedBox(height: 10),
+                    Text(car.power),
                   ],
                 ),
               ],
@@ -132,7 +138,7 @@ class CarPage extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Container(
-                                        width: 150,
+                                        width: 180,
                                         height: 140,
                                         decoration: const BoxDecoration(
                                           color:
@@ -142,18 +148,20 @@ class CarPage extends StatelessWidget {
                                         ),
                                         child: Center(
                                           child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
                                             children: [
                                               SvgPicture.asset(
                                                 'assets/img/InfoSVG/engine-motor-svgrepo-com (1).svg',
-                                                height: 50,
+                                                height: 40,
                                               ),
                                               const SizedBox(height: 10),
                                               Text(
-                                                carsList[DateTime.may].engin,
+                                                car.engin,
                                                 style: const TextStyle(
-                                                  fontFamily: 'yekanlight',
-                                                  color: Colors.white,
-                                                ),
+                                                    fontFamily: 'yekanlight',
+                                                    color: Colors.white,
+                                                    fontSize: 18),
                                               ),
                                             ],
                                           ),
@@ -163,7 +171,7 @@ class CarPage extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Container(
-                                        width: 150,
+                                        width: 140,
                                         height: 140,
                                         decoration: const BoxDecoration(
                                           color:
@@ -173,14 +181,16 @@ class CarPage extends StatelessWidget {
                                         ),
                                         child: Center(
                                           child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
                                             children: [
                                               SvgPicture.asset(
-                                                'assets/img/InfoSVG/timer-svgrepo-com.svg',
+                                                'assets/img/InfoSVG/chair-2-svgrepo-com.svg',
                                                 height: 50,
                                               ),
                                               const SizedBox(height: 10),
                                               Text(
-                                                carsList[DateTime.may].engin,
+                                                car.passengerCapacity,
                                                 style: const TextStyle(
                                                   fontFamily: 'yekanlight',
                                                   color: Colors.white,
@@ -194,7 +204,7 @@ class CarPage extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Container(
-                                        width: 150,
+                                        width: 140,
                                         height: 140,
                                         decoration: const BoxDecoration(
                                           color:
@@ -206,15 +216,16 @@ class CarPage extends StatelessWidget {
                                           child: Padding(
                                             padding: const EdgeInsets.all(8.0),
                                             child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
                                               children: [
                                                 SvgPicture.asset(
-                                                  'assets/img/InfoSVG/power-svgrepo-com.svg',
+                                                  'assets/img/InfoSVG/architecture-building-city-svgrepo-com.svg',
                                                   height: 40,
                                                 ),
                                                 const SizedBox(height: 10),
                                                 Text(
-                                                  carsList[DateTime.april]
-                                                      .engin,
+                                                  car.cityFuelEconomy,
                                                   style: const TextStyle(
                                                     fontFamily: 'yekanlight',
                                                     color: Colors.white,
@@ -229,7 +240,7 @@ class CarPage extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Container(
-                                        width: 150,
+                                        width: 140,
                                         height: 140,
                                         decoration: const BoxDecoration(
                                           color:
@@ -239,6 +250,8 @@ class CarPage extends StatelessWidget {
                                         ),
                                         child: Center(
                                           child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
                                             children: [
                                               SvgPicture.asset(
                                                 'assets/img/InfoSVG/highway-svgrepo-com.svg',
@@ -246,8 +259,7 @@ class CarPage extends StatelessWidget {
                                               ),
                                               const SizedBox(height: 20),
                                               Text(
-                                                carsList[DateTime.september]
-                                                    .classCar,
+                                                car.highwayFuelEconomy,
                                                 style: const TextStyle(
                                                   fontFamily: 'yekanlight',
                                                   color: Colors.white,

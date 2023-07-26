@@ -5,6 +5,9 @@ import 'package:merscedes_car/model/carsData.dart';
 import 'package:merscedes_car/view/carPage.dart';
 
 class carList extends StatefulWidget {
+  final carList car;
+  carList({required this.car});
+
   @override
   State<carList> createState() => _carListState();
 }
@@ -32,9 +35,11 @@ class _carListState extends State<carList> {
                         children: [
                           InkWell(
                             onTap: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => CarPage())),
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CarPage(),
+                              ),
+                            ),
                             child: Container(
                               width: 340,
                               height: 165,
@@ -129,11 +134,12 @@ class _carListState extends State<carList> {
                                                         Radius.circular(13)),
                                               ),
                                             ),
-                                            onPressed: () => Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        CarPage())),
+                                            onPressed: () {
+                                              Navigator.pushNamed(
+                                                  context, 'CarPage',
+                                                  arguments:
+                                                      carsList[index].id);
+                                            },
                                             child: const Padding(
                                               padding: EdgeInsets.fromLTRB(
                                                   10, 0, 10, 0),

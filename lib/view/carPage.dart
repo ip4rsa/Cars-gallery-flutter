@@ -111,11 +111,12 @@ class CarPage extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: Container(
                     decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 211, 211, 211),
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(40),
-                            topRight: Radius.circular(40))),
-                    height: 850,
+                      color: Color.fromARGB(255, 211, 211, 211),
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(40),
+                          topRight: Radius.circular(40)),
+                    ),
+                    // height: 1500,
                     width: double.infinity,
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
@@ -277,24 +278,37 @@ class CarPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 22),
+                          const SizedBox(height: 32),
                           const Padding(
-                            padding: EdgeInsets.fromLTRB(20, 0, 10, 0),
-                            child: Column(
-                              children: [
-                                Text(
-                                  "توضیحات",
-                                  style: TextStyle(
-                                    fontFamily: 'yekanbold',
-                                    fontSize: 20,
-                                  ),
-                                ),
-                                Text(
-                                  '...',
-                                  style: TextStyle(
-                                      fontFamily: 'yekanLight', fontSize: 16),
-                                ),
-                              ],
+                            padding: EdgeInsets.only(right: 25),
+                            child: Text(
+                              ": توضیحات",
+                              style: TextStyle(
+                                fontFamily: 'yekanbold',
+                                fontSize: 25,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                            child: Text(
+                              car.articleCar,
+                              style: const TextStyle(
+                                height: 1.45,
+                                fontFamily: 'yekanLight',
+                                fontSize: 18,
+                              ),
+                              textAlign: TextAlign.right,
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(right: 25),
+                            child: Text(
+                              ": آپشن ها",
+                              style: TextStyle(
+                                fontFamily: 'yekanbold',
+                                fontSize: 23,
+                              ),
                             ),
                           ),
                         ],

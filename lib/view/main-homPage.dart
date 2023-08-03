@@ -55,13 +55,13 @@ class btmNav extends StatelessWidget {
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(25), topRight: Radius.circular(25))),
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: GNav(
             backgroundColor: const Color.fromARGB(255, 15, 15, 15),
             gap: 10,
-            color: Color.fromARGB(255, 255, 255, 255),
+            color: const Color.fromARGB(255, 255, 255, 255),
             activeColor: Colors.white,
-            tabBackgroundColor: Color.fromARGB(133, 74, 74, 74),
+            tabBackgroundColor: const Color.fromARGB(133, 74, 74, 74),
             padding: const EdgeInsets.all(15),
             tabs: [
               GButton(

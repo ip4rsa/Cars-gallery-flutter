@@ -1,12 +1,32 @@
+import 'package:chewie/chewie.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:merscedes_car/model/dataModel.dart';
 
-class CarPage extends StatelessWidget {
+class CarPage extends StatefulWidget {
   //کانشتراکتور---------------------------------
   final CarsModel car;
   CarPage({super.key, required this.car});
+
+//  videoPlayerController.initialize();
+  @override
+  State<CarPage> createState() => _CarPageState();
+}
+
+class _CarPageState extends State<CarPage> {
+// final videoPlayerController = VideoPlayerController.network(
+//     'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4');
+
+// final chewieController = ChewieController(
+//   videoPlayerController: videoPlayerController,
+//   autoPlay: true,
+//   looping: true,
+// );
+
+// final playerWidget = Chewie(
+//   controller: chewieController,
+// );
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +54,7 @@ class CarPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                   child: Text(
-                    car.nameCarFA,
+                    widget.car.nameCarFA,
                     style: const TextStyle(
                         color: Color.fromARGB(255, 61, 61, 61),
                         fontFamily: 'yekanlight',
@@ -55,7 +75,7 @@ class CarPage extends StatelessWidget {
             const SizedBox(height: 20),
             Center(
               child: Image.asset(
-                car.imgCarPNG,
+                widget.car.imgCarPNG,
                 scale: 2.5,
               ),
             ),
@@ -73,7 +93,7 @@ class CarPage extends StatelessWidget {
                           fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(height: 10),
-                    Text(car.speed),
+                    Text(widget.car.speed),
                   ],
                 ),
                 Column(
@@ -86,7 +106,7 @@ class CarPage extends StatelessWidget {
                           fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(height: 10),
-                    Text(car.acceleration),
+                    Text(widget.car.acceleration),
                   ],
                 ),
                 Column(
@@ -99,7 +119,7 @@ class CarPage extends StatelessWidget {
                           fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(height: 10),
-                    Text(car.power),
+                    Text(widget.car.power),
                   ],
                 ),
               ],
@@ -158,7 +178,7 @@ class CarPage extends StatelessWidget {
                                                 padding: const EdgeInsets.only(
                                                     right: 5, left: 5),
                                                 child: Text(
-                                                  car.engin,
+                                                  widget.car.engin,
                                                   style: const TextStyle(
                                                     fontFamily: 'yekanlight',
                                                     color: Colors.white,
@@ -193,7 +213,7 @@ class CarPage extends StatelessWidget {
                                               ),
                                               const SizedBox(height: 10),
                                               Text(
-                                                car.passengerCapacity,
+                                                widget.car.passengerCapacity,
                                                 style: const TextStyle(
                                                   fontFamily: 'yekanlight',
                                                   color: Colors.white,
@@ -228,7 +248,7 @@ class CarPage extends StatelessWidget {
                                                 ),
                                                 const SizedBox(height: 10),
                                                 Text(
-                                                  car.cityFuelEconomy,
+                                                  widget.car.cityFuelEconomy,
                                                   style: const TextStyle(
                                                     fontFamily: 'yekanlight',
                                                     color: Colors.white,
@@ -262,7 +282,7 @@ class CarPage extends StatelessWidget {
                                               ),
                                               const SizedBox(height: 20),
                                               Text(
-                                                car.highwayFuelEconomy,
+                                                widget.car.highwayFuelEconomy,
                                                 style: const TextStyle(
                                                   fontFamily: 'yekanlight',
                                                   color: Colors.white,
@@ -292,7 +312,7 @@ class CarPage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                             child: Text(
-                              car.articleCar,
+                              widget.car.articleCar,
                               style: const TextStyle(
                                 height: 1.45,
                                 fontFamily: 'yekanLight',
@@ -309,6 +329,18 @@ class CarPage extends StatelessWidget {
                                 fontFamily: 'yekanbold',
                                 fontSize: 23,
                               ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                            child: Text(
+                              widget.car.options,
+                              style: const TextStyle(
+                                height: 1.45,
+                                fontFamily: 'yekanLight',
+                                fontSize: 18,
+                              ),
+                              textAlign: TextAlign.left,
                             ),
                           ),
                         ],

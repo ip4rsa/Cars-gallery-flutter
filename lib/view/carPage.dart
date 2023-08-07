@@ -5,7 +5,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:merscedes_car/model/dataModel.dart';
 
 class CarPage extends StatefulWidget {
-  //کانشتراکتور---------------------------------
   final CarsModel car;
   CarPage({super.key, required this.car});
 

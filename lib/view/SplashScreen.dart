@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'main-homPage.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -12,7 +11,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 4)).then((value) {
+    Future.delayed(const Duration(seconds: 4)).then((value) {
       Navigator.of(context)
           .pushReplacement(MaterialPageRoute(builder: (context) => homePage()));
     });
@@ -36,10 +35,6 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 85,
                 ),
               ),
-            ),
-            Text(
-              "Merscedes Benz",
-              style: TextStyle(color: Colors.white, fontSize: 18),
             ),
           ],
         ),

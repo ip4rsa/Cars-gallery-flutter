@@ -3,16 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:merscedes_car/carList.dart';
 import '../model/carsData.dart';
 
-class homeScreen extends StatelessWidget {
+class homeScreen extends StatefulWidget {
   homeScreen({
     super.key,
     required this.bodyMarginScreen,
     required this.size,
   });
-
   final double bodyMarginScreen;
   final Size size;
+  @override
+  State<homeScreen> createState() => _homeScreenState();
+}
 
+class _homeScreenState extends State<homeScreen> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -52,12 +55,14 @@ class homeScreen extends StatelessWidget {
 
           //------ title list cars ------
           Padding(
-            padding: const EdgeInsets.fromLTRB(30, 0, 17, 7),
+            padding: const EdgeInsets.fromLTRB(36, 0, 15, 7),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                InkWell(onTap: () {}, child: Icon(CupertinoIcons.arrow_left)),
+                InkWell(
+                  onTap: () {},
+                  child: const Icon(CupertinoIcons.text_badge_star),
+                ),
                 const Padding(
                   padding: EdgeInsets.only(left: 0),
                   child: Text(
@@ -85,7 +90,7 @@ class homeScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: EdgeInsets.fromLTRB(
-                          index == 0 ? bodyMarginScreen : 8, 8, 7, 8),
+                          index == 0 ? widget.bodyMarginScreen : 8, 8, 7, 8),
                       child: InkWell(
                         onTap: () {},
                         child: Container(
@@ -104,10 +109,12 @@ class homeScreen extends StatelessWidget {
                               ]),
                           height: 100,
                           width: 210,
+                          // duration: Duration(seconds: 3),
                           child: Column(
                             children: [
                               Padding(
-                                padding: EdgeInsets.fromLTRB(15, 9, 15, 0),
+                                padding:
+                                    const EdgeInsets.fromLTRB(15, 9, 15, 0),
                                 child: Padding(
                                   padding: const EdgeInsets.only(top: 2),
                                   child: Row(
@@ -198,8 +205,8 @@ class homeScreen extends StatelessWidget {
 
           //------ section 2 BTN ------
           Container(
-            height: size.height / 3.7,
-            width: size.width / 1.09,
+            height: widget.size.height / 3.7,
+            width: widget.size.width / 1.09,
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(23)),
               gradient: LinearGradient(
@@ -222,18 +229,15 @@ class homeScreen extends StatelessWidget {
                       color: Colors.blueAccent,
                       size: 30,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-                      child: InkWell(
-                        onTap: () => Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => carList())),
-                        child: const Text(
-                          "تاریخچه شرکت مرسدس بنز",
-                          style: TextStyle(
-                              fontSize: 19,
-                              fontFamily: 'yekanlight',
-                              color: Color.fromARGB(255, 255, 255, 255)),
-                        ),
+                    InkWell(
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => carList())),
+                      child: const Text(
+                        "تاریخچه شرکت مرسدس بنز",
+                        style: TextStyle(
+                            fontSize: 19,
+                            fontFamily: 'yekanlight',
+                            color: Color.fromARGB(255, 255, 255, 255)),
                       ),
                     ),
                   ],
@@ -256,17 +260,18 @@ class homeScreen extends StatelessWidget {
                       size: 30,
                     ),
                     const SizedBox(width: 10),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
-                      child: InkWell(
-                        onTap: () {},
-                        child: const Text(
-                          "گالری ماشین ها",
-                          style: TextStyle(
-                              fontSize: 19,
-                              fontFamily: 'yekanlight',
-                              color: Color.fromARGB(255, 255, 255, 255)),
-                        ),
+                    InkWell(
+                      onTap: () {
+                        // setState(() {
+                        //   imgOppacity = 1;
+                        // });
+                      },
+                      child: const Text(
+                        "گالری ماشین ها",
+                        style: TextStyle(
+                            fontSize: 19,
+                            fontFamily: 'yekanlight',
+                            color: Color.fromARGB(255, 255, 255, 255)),
                       ),
                     ),
                   ],
@@ -274,7 +279,7 @@ class homeScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: size.height / 19),
+          SizedBox(height: widget.size.height / 19),
         ],
       ),
     );

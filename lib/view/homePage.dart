@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:merscedes_car/carList.dart';
 import 'package:merscedes_car/view/vodeo.dart';
 import '../model/carsData.dart';
+import 'carPage.dart';
 
 class homeScreen extends StatefulWidget {
   homeScreen({
@@ -96,7 +97,15 @@ class _homeScreenState extends State<homeScreen> {
                       padding: EdgeInsets.fromLTRB(
                           index == 0 ? widget.bodyMarginScreen : 8, 8, 7, 8),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      CarPage(car: carsList[index]),
+                                ),
+                              );
+                        },
                         child: Container(
                           decoration: const BoxDecoration(
                               borderRadius: BorderRadius.all(
@@ -151,7 +160,7 @@ class _homeScreenState extends State<homeScreen> {
                               ),
                               Padding(
                                 padding:
-                                    const EdgeInsets.fromLTRB(15, 38, 10, 0),
+                                    const EdgeInsets.fromLTRB(15, 30, 10, 0),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -172,7 +181,15 @@ class _homeScreenState extends State<homeScreen> {
                                               Radius.circular(10)),
                                         ),
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        () => Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => CarPage(
+                                                    car: carsList[index]),
+                                              ),
+                                            );
+                                      },
                                       child: const Padding(
                                         padding:
                                             EdgeInsets.fromLTRB(3, 5, 3, 5),

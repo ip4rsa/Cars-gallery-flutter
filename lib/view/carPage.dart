@@ -1,33 +1,32 @@
-import 'package:chewie/chewie.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:merscedes_car/model/carsData.dart';
 import 'package:merscedes_car/model/dataModel.dart';
+import 'package:video_player/video_player.dart';
 
 class CarPage extends StatefulWidget {
   final CarsModel car;
   CarPage({super.key, required this.car});
 
-//  videoPlayerController.initialize();
   @override
   State<CarPage> createState() => _CarPageState();
 }
 
 class _CarPageState extends State<CarPage> {
-// final videoPlayerController = VideoPlayerController.network(
-//     'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4');
+  // late VideoPlayerController _controller;
 
-// final chewieController = ChewieController(
-//   videoPlayerController: videoPlayerController,
-//   autoPlay: true,
-//   looping: true,
-// );
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _controller =
+  //       VideoPlayerController.networkUrl(Uri.parse(carsList[1].carVideo))
+  //         ..initialize().then((_) {
+  //           // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+  //           setState(() {});
+  //         });
+  // }
 
-// final playerWidget = Chewie(
-//   controller: chewieController,
-// );
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
@@ -46,7 +45,7 @@ class _CarPageState extends State<CarPage> {
                   child: const Icon(
                     CupertinoIcons.left_chevron,
                     color: Color.fromARGB(255, 61, 61, 61),
-                    size: 35,
+                    size: 32,
                   ),
                 ),
                 const Expanded(child: SizedBox()),
@@ -58,7 +57,7 @@ class _CarPageState extends State<CarPage> {
                         color: Color.fromARGB(255, 61, 61, 61),
                         fontFamily: 'yekanlight',
                         fontWeight: FontWeight.w700,
-                        fontSize: 30),
+                        fontSize: 28),
                   ),
                 ),
                 const Expanded(child: SizedBox()),
@@ -407,6 +406,14 @@ class _CarPageState extends State<CarPage> {
                 ),
               ],
             ),
+            // Center(
+            //   child: _controller.value.isInitialized
+            //       ? AspectRatio(
+            //           aspectRatio: _controller.value.aspectRatio,
+            //           child: VideoPlayer(_controller),
+            //         )
+            //       : Container(),
+            // ),
           ],
         ),
       ),

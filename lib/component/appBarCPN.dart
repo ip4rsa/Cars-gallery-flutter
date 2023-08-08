@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 PreferredSize appBar(String title) {
   return PreferredSize(
-    preferredSize: const Size.fromHeight(68),
+    preferredSize: const Size.fromHeight(80),
     child: Container(
       decoration: const BoxDecoration(
         color: Color.fromARGB(255, 255, 255, 255),
@@ -35,13 +35,10 @@ PreferredSize appBar(String title) {
               ),
             ),
           ],
-          leading: InkWell(
-            onTap: () {},
-            child: const Icon(
-              CupertinoIcons.left_chevron,
-              color: Color.fromARGB(255, 31, 31, 31),
-              size: 28,
-            ),
+          leading: const Icon(
+            CupertinoIcons.car_detailed,
+            color: Color.fromARGB(255, 31, 31, 31),
+            size: 28,
           ),
         ),
       ),

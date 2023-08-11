@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:merscedes_car/carList.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:merscedes_car/model/carsData.dart';
-import 'package:merscedes_car/view/carPage.dart';
 import 'package:merscedes_car/view/homePage.dart';
 
 class homePage extends StatefulWidget {

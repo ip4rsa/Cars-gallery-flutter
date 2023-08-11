@@ -1,14 +1,11 @@
-import 'package:chewie/chewie.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:merscedes_car/model/carsData.dart';
 import 'package:merscedes_car/model/dataModel.dart';
 
 class CarPage extends StatefulWidget {
   final CarsModel car;
   CarPage({super.key, required this.car});
-
   @override
   State<CarPage> createState() => _CarPageState();
 }

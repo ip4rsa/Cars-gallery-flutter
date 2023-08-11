@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:merscedes_car/carList.dart';
 import 'package:merscedes_car/view/vodeo.dart';
 import '../model/carsData.dart';
+import '../model/dataModel.dart';
 import 'carPage.dart';
 
 class homeScreen extends StatefulWidget {
@@ -10,10 +11,11 @@ class homeScreen extends StatefulWidget {
     super.key,
     required this.bodyMarginScreen,
     required this.size,
+    required this.car,
   });
   final double bodyMarginScreen;
   final Size size;
-
+  final car;
   @override
   State<homeScreen> createState() => _homeScreenState();
 }
@@ -97,15 +99,12 @@ class _homeScreenState extends State<homeScreen> {
                       padding: EdgeInsets.fromLTRB(
                           index == 0 ? widget.bodyMarginScreen : 8, 8, 7, 8),
                       child: InkWell(
-                        onTap: () {
-                          () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      CarPage(car: carsList[index]),
-                                ),
-                              );
-                        },
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CarPage(car: carsList[index]),
+                          ),
+                        ),
                         child: Container(
                           decoration: const BoxDecoration(
                               borderRadius: BorderRadius.all(
@@ -181,15 +180,13 @@ class _homeScreenState extends State<homeScreen> {
                                               Radius.circular(10)),
                                         ),
                                       ),
-                                      onPressed: () {
-                                        () => Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) => CarPage(
-                                                    car: carsList[index]),
-                                              ),
-                                            );
-                                      },
+                                      onPressed: () => Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              CarPage(car: carsList[index]),
+                                        ),
+                                      ),
                                       child: const Padding(
                                         padding:
                                             EdgeInsets.fromLTRB(3, 5, 3, 5),
@@ -249,9 +246,12 @@ class _homeScreenState extends State<homeScreen> {
                         size: 30,
                       ),
                       InkWell(
-                        // onTap: () => Navigator.push(context,
-                        //     MaterialPageRoute(builder: (context) => carList())
-                        //     ),
+                        // onTap: () => Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //     builder: (context) => CarPage(car: carsList[index]),
+                        //   ),
+                        // ),
                         child: const Text(
                           "تاریخچه شرکت مرسدس بنز",
                           style: TextStyle(
@@ -283,7 +283,9 @@ class _homeScreenState extends State<homeScreen> {
                       InkWell(
                         onTap: () {
                           // Navigator.push(
-                          //     context, MaterialPageRoute(builder: VideoApp()));
+                          //     context,
+                          //     MaterialPageRoute(
+                          //         builder: (context) => VideoPlayersScreen()));
                         },
                         child: const Text(
                           "گالری ماشین ها",

@@ -132,12 +132,13 @@ class _carListState extends State<carList> {
                                                         Radius.circular(13)),
                                               ),
                                             ),
-                                            onPressed: () {
-                                              Navigator.pushNamed(
-                                                  context, 'CarPage',
-                                                  arguments:
-                                                      carsList[index].id);
-                                            },
+                                            onPressed: () => Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => CarPage(
+                                                    car: carsList[index]),
+                                              ),
+                                            ),
                                             child: const Padding(
                                               padding: EdgeInsets.fromLTRB(
                                                   10, 0, 10, 0),

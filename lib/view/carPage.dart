@@ -1,9 +1,9 @@
+import 'package:chewie/chewie.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:merscedes_car/model/carsData.dart';
 import 'package:merscedes_car/model/dataModel.dart';
-import 'package:video_player/video_player.dart';
 
 class CarPage extends StatefulWidget {
   final CarsModel car;
@@ -14,19 +14,6 @@ class CarPage extends StatefulWidget {
 }
 
 class _CarPageState extends State<CarPage> {
-  // late VideoPlayerController _controller;
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _controller =
-  //       VideoPlayerController.networkUrl(Uri.parse(carsList[1].carVideo))
-  //         ..initialize().then((_) {
-  //           // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-  //           setState(() {});
-  //         });
-  // }
-
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
@@ -42,10 +29,13 @@ class _CarPageState extends State<CarPage> {
               children: [
                 InkWell(
                   onTap: () => Navigator.pop(context),
-                  child: const Icon(
-                    CupertinoIcons.left_chevron,
-                    color: Color.fromARGB(255, 61, 61, 61),
-                    size: 32,
+                  child: const Padding(
+                    padding: EdgeInsets.only(bottom: 5),
+                    child: Icon(
+                      CupertinoIcons.left_chevron,
+                      color: Color.fromARGB(255, 61, 61, 61),
+                      size: 31,
+                    ),
                   ),
                 ),
                 const Expanded(child: SizedBox()),
@@ -126,13 +116,13 @@ class _CarPageState extends State<CarPage> {
             Stack(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 30, 0, 10),
                   child: Container(
                     decoration: const BoxDecoration(
                       color: Color.fromARGB(255, 211, 211, 211),
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(40),
-                          topRight: Radius.circular(40)),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(40),
+                      ),
                     ),
                     // height: 1500,
                     width: double.infinity,
@@ -298,12 +288,12 @@ class _CarPageState extends State<CarPage> {
                           ),
                           const SizedBox(height: 32),
                           const Padding(
-                            padding: EdgeInsets.only(right: 25),
+                            padding: EdgeInsets.only(right: 25, bottom: 20),
                             child: Text(
                               ": توضیحات",
                               style: TextStyle(
                                 fontFamily: 'yekanbold',
-                                fontSize: 25,
+                                fontSize: 27,
                               ),
                             ),
                           ),
@@ -319,14 +309,27 @@ class _CarPageState extends State<CarPage> {
                               textAlign: TextAlign.right,
                             ),
                           ),
+                          const Divider(
+                            color: Color.fromARGB(100, 57, 57, 57),
+                            endIndent: 30,
+                            indent: 30,
+                          ),
                           const Padding(
-                            padding: EdgeInsets.only(right: 25),
-                            child: Text(
-                              ": آپشن ها",
-                              style: TextStyle(
-                                fontFamily: 'yekanbold',
-                                fontSize: 23,
-                              ),
+                            padding:
+                                EdgeInsets.only(right: 25, top: 25, bottom: 20),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  ": آپشن ها",
+                                  style: TextStyle(
+                                    fontFamily: 'yekanbold',
+                                    fontSize: 25,
+                                  ),
+                                ),
+                                SizedBox(width: 10),
+                                Icon(Icons.rocket_rounded),
+                              ],
                             ),
                           ),
                           Padding(
@@ -362,7 +365,7 @@ class _CarPageState extends State<CarPage> {
                             width: 23,
                             height: 23,
                             decoration: const BoxDecoration(
-                              color: Color.fromARGB(255, 223, 213, 24),
+                              color: Color.fromARGB(255, 237, 219, 22),
                               shape: BoxShape.circle,
                             ),
                           ),
@@ -373,7 +376,7 @@ class _CarPageState extends State<CarPage> {
                             width: 23,
                             height: 23,
                             decoration: const BoxDecoration(
-                              color: Color.fromARGB(255, 20, 89, 173),
+                              color: Color.fromARGB(255, 28, 110, 209),
                               shape: BoxShape.circle,
                             ),
                           ),
@@ -395,7 +398,7 @@ class _CarPageState extends State<CarPage> {
                             width: 23,
                             height: 23,
                             decoration: const BoxDecoration(
-                              color: Color.fromARGB(255, 133, 67, 67),
+                              color: Color.fromARGB(255, 168, 44, 44),
                               shape: BoxShape.circle,
                             ),
                           ),

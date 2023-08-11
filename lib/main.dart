@@ -7,9 +7,11 @@ void main() {
 }
 
 class MercedesCars extends StatelessWidget {
+  const MercedesCars({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       localizationsDelegates: [
         GlobalWidgetsLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,

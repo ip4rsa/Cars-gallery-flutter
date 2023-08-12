@@ -23,10 +23,32 @@ class _homeScreenState extends State<homeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(),
+      appBar: AppBar(
+        toolbarHeight: 80,
+        elevation: 0,
+        backgroundColor: const Color.fromARGB(255, 250, 250, 250),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.all(15.0),
+            child: Row(
+              children: [
+                Text(
+                  "گالری مرسدس",
+                  style: TextStyle(
+                    fontFamily: 'yekanmedum',
+                    fontWeight: FontWeight.w100,
+                    color: Color.fromARGB(255, 35, 35, 35),
+                    fontSize: 25,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
       drawer: Drawer(
-        elevation: 5,
-        backgroundColor: const Color.fromRGBO(39, 43, 65, 1),
+        elevation: 8,
+        backgroundColor: Color.fromARGB(255, 10, 100, 197),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListView(
@@ -34,87 +56,33 @@ class _homeScreenState extends State<homeScreen> {
               DrawerHeader(
                 child: Center(
                   child: Image.asset(
-                    'assets/image/logoWith.png',
-                    scale: 1.4,
+                    'assets/img/logoMercedes.png',
+                    height: 90,
                   ),
                 ),
               ),
               InkWell(
                 onTap: () {},
                 child: const ListTile(
-                  title: Text(
-                    "پروفایل کاربری",
-                    style: TextStyle(
-                      fontFamily: 'yekanlight',
-                      fontSize: 18,
+                  title: SizedBox(
+                    height: 100,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Text(
+                            "درباره سازنده",
+                            style: TextStyle(
+                                fontFamily: 'yekanlight',
+                                fontSize: 18,
+                                color: Colors.white),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
               ),
-              Divider(),
-              InkWell(
-                onTap: () {},
-                child: const ListTile(
-                  title: Text(
-                    "درباره سبقت",
-                    style: TextStyle(
-                      fontFamily: 'yekanlight',
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
-              ),
-              Divider(),
-              InkWell(
-                onTap: () {},
-                child: const ListTile(
-                  title: Text(
-                    "اشتراک گذاری سبقت",
-                    style: TextStyle(
-                      fontFamily: 'yekanlight',
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
-              ),
-              Divider(),
-              InkWell(
-                onTap: () {},
-                child: const ListTile(
-                  title: Text(
-                    "پشتیبانی",
-                    style: TextStyle(
-                      fontFamily: 'yekanlight',
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
-              ),
-              const Divider(
-                color: Color.fromARGB(93, 255, 255, 255),
-                thickness: .3,
-              ),
-              const SizedBox(height: 20),
-              ListTile(
-                  title: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: const Text(
-                      "حساب کاربری",
-                      style: TextStyle(color: Color.fromARGB(255, 87, 239, 92)),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: const Text(
-                      "خروج",
-                      style: TextStyle(color: Colors.red),
-                    ),
-                  ),
-                ],
-              )),
             ],
           ),
         ),
@@ -124,45 +92,44 @@ class _homeScreenState extends State<homeScreen> {
         child: Column(
           children: [
             //------ App Bar ------
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 45, 20, 0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    "گالری مرسدس",
-                    style: TextStyle(
-                      fontFamily: 'yekanmedum',
-                      fontWeight: FontWeight.w100,
-                      color: Color.fromARGB(255, 35, 35, 35),
-                      fontSize: 25,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: (() {
-                      _key.currentState!.openDrawer();
-                    }),
-                    child: Padding(
-                      padding: const EdgeInsets.all(1.0),
-                      child: Image.asset(
-                        "assets/img/menuIcon.png",
-                        height: 33,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //     children: [
+            //       const Text(
+            //         "گالری مرسدس",
+            //         style: TextStyle(
+            //           fontFamily: 'yekanmedum',
+            //           fontWeight: FontWeight.w100,
+            //           color: Color.fromARGB(255, 35, 35, 35),
+            //           fontSize: 25,
+            //         ),
+            //       ),
+            //       InkWell(
+            //         onTap: (() {
+            //           _key.currentState!.openDrawer();
+            //         }),
+            //         child: Padding(
+            //           padding: const EdgeInsets.all(1.0),
+            //           child: Image.asset(
+            //             "assets/img/menuIcon.png",
+            //             height: 33,
+            //           ),
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
 
-            const SizedBox(height: 30),
+            const SizedBox(height: 10),
 
             //------ title list cars ------
             const Padding(
-              padding: EdgeInsets.fromLTRB(36, 0, 15, 7),
+              padding: EdgeInsets.fromLTRB(20, 0, 22, 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(CupertinoIcons.text_badge_star),
                   Padding(
                     padding: EdgeInsets.only(left: 0),
                     child: Text(
@@ -173,6 +140,10 @@ class _homeScreenState extends State<homeScreen> {
                         fontSize: 16,
                       ),
                     ),
+                  ),
+                  Icon(
+                    CupertinoIcons.text_badge_star,
+                    size: 22,
                   ),
                 ],
               ),
@@ -287,12 +258,21 @@ class _homeScreenState extends State<homeScreen> {
                                               EdgeInsets.fromLTRB(3, 5, 3, 5),
                                           child: Row(
                                             children: [
-                                              Text(
-                                                "مشاهده",
-                                                style: TextStyle(
-                                                    fontFamily: 'yekanMedum'),
+                                              Padding(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    0, 0, 0, 0),
+                                                child: Text(
+                                                  "مشاهده",
+                                                  style: TextStyle(
+                                                      fontFamily: 'yekanMedum',
+                                                      color: Colors.white),
+                                                ),
                                               ),
-                                              Icon(CupertinoIcons.right_chevron)
+                                              Icon(
+                                                CupertinoIcons.right_chevron,
+                                                color: Colors.white,
+                                                size: 22,
+                                              ),
                                             ],
                                           ),
                                         ),
@@ -332,28 +312,23 @@ class _homeScreenState extends State<homeScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Icon(
-                          CupertinoIcons.left_chevron,
-                          color: Colors.blueAccent,
-                          size: 30,
-                        ),
                         InkWell(
-                          // onTap: () => Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) => CarPage(car: carsList[index]),
-                          //   ),
-                          // ),
-                          child: Text(
+                          onTap: () {},
+                          child: const Text(
                             "تاریخچه شرکت مرسدس بنز",
                             style: TextStyle(
                                 fontSize: 19,
                                 fontFamily: 'yekanlight',
                                 color: Color.fromARGB(255, 255, 255, 255)),
                           ),
+                        ),
+                        const Icon(
+                          CupertinoIcons.right_chevron,
+                          color: Colors.blueAccent,
+                          size: 30,
                         ),
                       ],
                     ),
@@ -369,26 +344,20 @@ class _homeScreenState extends State<homeScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        const Icon(
-                          CupertinoIcons.left_chevron,
-                          color: Colors.blueAccent,
-                          size: 30,
-                        ),
-                        const SizedBox(width: 10),
                         InkWell(
-                          onTap: () {
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: (context) => VideoPlayersScreen()));
-                          },
+                          onTap: () {},
                           child: const Text(
-                            "گالری ماشین ها",
+                            "گالری ماشین ها            ",
                             style: TextStyle(
                                 fontSize: 19,
                                 fontFamily: 'yekanlight',
                                 color: Color.fromARGB(255, 255, 255, 255)),
                           ),
+                        ),
+                        const Icon(
+                          CupertinoIcons.right_chevron,
+                          color: Colors.blueAccent,
+                          size: 30,
                         ),
                       ],
                     ),

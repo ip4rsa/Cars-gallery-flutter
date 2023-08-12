@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:merscedes_car/carList.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:merscedes_car/view/homePage.dart';
@@ -25,8 +26,22 @@ class _homePageState extends State<homePage> {
       ),
       carList()
     ];
-
     return MaterialApp(
+      localizationsDelegates: const [
+        GlobalWidgetsLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('fa'), // persian
+      ],
+      theme: ThemeData(
+        primarySwatch: Colors.lightBlue,
+        iconTheme: const IconThemeData(
+          color: Color.fromARGB(255, 0, 0, 0),
+          size: 30,
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         bottomNavigationBar: btmNav(changeScreen: (int value) {

@@ -61,14 +61,6 @@ class _carListState extends State<carList> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Padding(
-                                          padding: const EdgeInsets.fromLTRB(
-                                              13, 0, 0, 0),
-                                          child: Image.asset(
-                                            carsList[index].imgCarPNG,
-                                            scale: 3.7,
-                                          ),
-                                        ),
                                         Column(
                                           children: [
                                             Padding(
@@ -95,25 +87,23 @@ class _carListState extends State<carList> {
                                             ),
                                           ],
                                         ),
+                                        Padding(
+                                          padding: const EdgeInsets.fromLTRB(
+                                              13, 0, 0, 0),
+                                          child: Image.asset(
+                                            carsList[index].imgCarPNG,
+                                            scale: 3.7,
+                                          ),
+                                        ),
                                       ],
                                     ),
                                     Padding(
-                                      padding:
-                                          const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                      padding: const EdgeInsets.fromLTRB(
+                                          0, 12, 0, 0),
                                       child: Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         children: [
-                                          const Padding(
-                                            padding: EdgeInsets.fromLTRB(
-                                                17, 0, 0, 0),
-                                            child: Text(
-                                              "2022",
-                                              style: TextStyle(
-                                                  color: Color.fromARGB(
-                                                      255, 115, 115, 115)),
-                                            ),
-                                          ),
                                           ElevatedButton(
                                             style: ElevatedButton.styleFrom(
                                               backgroundColor:
@@ -141,12 +131,23 @@ class _carListState extends State<carList> {
                                             ),
                                             child: const Padding(
                                               padding: EdgeInsets.fromLTRB(
-                                                  10, 0, 10, 0),
+                                                  10, 10, 10, 10),
                                               child: Text(
                                                 "مشاهده",
                                                 style: TextStyle(
                                                     color: Colors.white,
                                                     fontFamily: 'yekanMedum'),
+                                              ),
+                                            ),
+                                          ),
+                                          const Padding(
+                                            padding: EdgeInsets.fromLTRB(
+                                                17, 0, 0, 0),
+                                            child: Text(
+                                              "2022",
+                                              style: TextStyle(
+                                                color: Color.fromARGB(
+                                                    255, 115, 115, 115),
                                               ),
                                             ),
                                           ),

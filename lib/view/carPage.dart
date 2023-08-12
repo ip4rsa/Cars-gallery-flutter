@@ -24,17 +24,6 @@ class _CarPageState extends State<CarPage> {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                InkWell(
-                  onTap: () => Navigator.pop(context),
-                  child: const Padding(
-                    padding: EdgeInsets.only(bottom: 5),
-                    child: Icon(
-                      CupertinoIcons.left_chevron,
-                      color: Color.fromARGB(255, 61, 61, 61),
-                      size: 31,
-                    ),
-                  ),
-                ),
                 const Expanded(child: SizedBox()),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
@@ -48,6 +37,17 @@ class _CarPageState extends State<CarPage> {
                   ),
                 ),
                 const Expanded(child: SizedBox()),
+                InkWell(
+                  onTap: () => Navigator.pop(context),
+                  child: const Padding(
+                    padding: EdgeInsets.only(bottom: 5),
+                    child: Icon(
+                      CupertinoIcons.right_chevron,
+                      color: Color.fromARGB(255, 61, 61, 61),
+                      size: 31,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -286,12 +286,16 @@ class _CarPageState extends State<CarPage> {
                           const SizedBox(height: 32),
                           const Padding(
                             padding: EdgeInsets.only(right: 25, bottom: 20),
-                            child: Text(
-                              ": توضیحات",
-                              style: TextStyle(
-                                fontFamily: 'yekanbold',
-                                fontSize: 27,
-                              ),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "توضیحات :",
+                                  style: TextStyle(
+                                    fontFamily: 'yekanbold',
+                                    fontSize: 27,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                           Padding(
@@ -307,25 +311,26 @@ class _CarPageState extends State<CarPage> {
                             ),
                           ),
                           const Divider(
-                            color: Color.fromARGB(100, 57, 57, 57),
+                            color: Color.fromARGB(118, 19, 104, 194),
                             endIndent: 30,
                             indent: 30,
+                            thickness: .8,
                           ),
                           const Padding(
                             padding:
                                 EdgeInsets.only(right: 25, top: 25, bottom: 20),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
                               children: [
+                                Icon(Icons.rocket_rounded),
+                                SizedBox(width: 10),
                                 Text(
-                                  ": آپشن ها",
+                                  "آپشن ها :",
                                   style: TextStyle(
                                     fontFamily: 'yekanbold',
                                     fontSize: 25,
                                   ),
+                                  textAlign: TextAlign.right,
                                 ),
-                                SizedBox(width: 10),
-                                Icon(Icons.rocket_rounded),
                               ],
                             ),
                           ),
@@ -338,7 +343,7 @@ class _CarPageState extends State<CarPage> {
                                 fontFamily: 'yekanLight',
                                 fontSize: 18,
                               ),
-                              textAlign: TextAlign.left,
+                              textAlign: TextAlign.right,
                             ),
                           ),
                         ],

@@ -78,7 +78,12 @@ class _CarPageState extends State<CarPage> {
                           fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(height: 10),
-                    Text(widget.car.speed),
+                    Text(
+                      widget.car.speed,
+                      style: const TextStyle(
+                        fontFamily: 'yekanlight',
+                      ),
+                    ),
                   ],
                 ),
                 Column(
@@ -91,7 +96,12 @@ class _CarPageState extends State<CarPage> {
                           fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(height: 10),
-                    Text(widget.car.acceleration),
+                    Text(
+                      widget.car.acceleration,
+                      style: const TextStyle(
+                        fontFamily: 'yekanlight',
+                      ),
+                    ),
                   ],
                 ),
                 Column(
@@ -104,7 +114,12 @@ class _CarPageState extends State<CarPage> {
                           fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(height: 10),
-                    Text(widget.car.power),
+                    Text(
+                      widget.car.power,
+                      style: TextStyle(
+                        fontFamily: 'yekanlight',
+                      ),
+                    ),
                   ],
                 ),
               ],
@@ -411,14 +426,6 @@ class _CarPageState extends State<CarPage> {
                 ),
               ],
             ),
-            // Center(
-            //   child: _controller.value.isInitialized
-            //       ? AspectRatio(
-            //           aspectRatio: _controller.value.aspectRatio,
-            //           child: VideoPlayer(_controller),
-            //         )
-            //       : Container(),
-            // ),
           ],
         ),
       ),

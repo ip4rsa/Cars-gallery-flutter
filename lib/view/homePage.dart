@@ -91,37 +91,6 @@ class _homeScreenState extends State<homeScreen> {
         physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
-            //------ App Bar ------
-            // Padding(
-            //   padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //     children: [
-            //       const Text(
-            //         "گالری مرسدس",
-            //         style: TextStyle(
-            //           fontFamily: 'yekanmedum',
-            //           fontWeight: FontWeight.w100,
-            //           color: Color.fromARGB(255, 35, 35, 35),
-            //           fontSize: 25,
-            //         ),
-            //       ),
-            //       InkWell(
-            //         onTap: (() {
-            //           _key.currentState!.openDrawer();
-            //         }),
-            //         child: Padding(
-            //           padding: const EdgeInsets.all(1.0),
-            //           child: Image.asset(
-            //             "assets/img/menuIcon.png",
-            //             height: 33,
-            //           ),
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
-
             const SizedBox(height: 10),
 
             //------ title list cars ------
@@ -130,15 +99,12 @@ class _homeScreenState extends State<homeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 0),
-                    child: Text(
-                      "پر طرفدار ها",
-                      style: TextStyle(
-                        height: 1.5,
-                        fontFamily: 'yekanMedum',
-                        fontSize: 16,
-                      ),
+                  Text(
+                    "پر طرفدار ها",
+                    style: TextStyle(
+                      height: 1.5,
+                      fontFamily: 'yekanMedum',
+                      fontSize: 16,
                     ),
                   ),
                   Icon(
@@ -162,7 +128,7 @@ class _homeScreenState extends State<homeScreen> {
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: EdgeInsets.fromLTRB(
-                            index == 0 ? widget.bodyMarginScreen : 8, 8, 7, 8),
+                            8, 8, index == 0 ? widget.bodyMarginScreen : 8, 8),
                         child: InkWell(
                           onTap: () => Navigator.push(
                             context,
@@ -225,7 +191,7 @@ class _homeScreenState extends State<homeScreen> {
                                 ),
                                 Padding(
                                   padding:
-                                      const EdgeInsets.fromLTRB(15, 30, 10, 0),
+                                      const EdgeInsets.fromLTRB(15, 33, 10, 0),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,

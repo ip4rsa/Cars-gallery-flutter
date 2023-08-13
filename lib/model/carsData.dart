@@ -153,7 +153,7 @@ List<CarsModel> carsList = [
     acceleration: "3.2 ثانیه",
     carVideo:
         "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my22/gt-4dr-coupe/class-page/2022-AMG-GT-4DR-COUPE-CT-3-2-DR.mp4",
-    passengerCapacity: "",
+    passengerCapacity: "5 نفره",
     engin: "3982",
     options: """
 1. سیستم صوتی Burmester با توان خروجی بالا.
